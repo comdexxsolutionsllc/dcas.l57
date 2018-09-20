@@ -1,0 +1,40 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// Flag Icons
+@import '~flag-icon-css/sass/flag-icon';
+// Font Awesome
+@import '~font-awesome/scss/font-awesome';
+// Ionicons
+@import '~ionicons/dist/scss/ionicons';
+// material-design-iconic-font
+@import '~material-design-iconic-font/scss/material-design-iconic-font';
+// octicons
+@import '~octicons/index';
+// simple-line-icons
+@import '~simple-line-icons/scss/simple-line-icons';
+// Bootstrap Select
+@import '~bootstrap/scss/bootstrap';
+// DataTables
+@import '~datatables/media/css/jquery.dataTables.css';
+// FullCalendar
+@import '~fullcalendar/dist/fullcalendar.css';
+@import '~fullcalendar/dist/fullcalendar.print.css';
+// Select2
+@import '~select2/dist/css/select2.css';
+// SweetAlert2
+@import '~sweetalert2/dist/sweetalert2.css';
+// Trix
+@import '~trix/dist/trix.css';
+
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}

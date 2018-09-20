@@ -1,0 +1,49 @@
+{
+  "errors": [],
+  "warnings": [],
+  "assetsByChunkName": {
+    "/js/app": [
+      "/js/app.js",
+      "/css/app.css"
+    ]
+  },
+  "assets": [
+    {
+      "name": "/js/app.js",
+      "size": 354934,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "/js/app"
+      ],
+      "emitted": true,
+      "isOverSizeLimit": true
+    },
+    {
+      "name": "/css/app.css",
+      "size": 413143,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "/js/app"
+      ],
+      "emitted": true,
+      "isOverSizeLimit": true
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "/js/app": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "/js/app.js",
+        "/css/app.css"
+      ],
+      "isOverSizeLimit": true
+    }
+  }
+}
