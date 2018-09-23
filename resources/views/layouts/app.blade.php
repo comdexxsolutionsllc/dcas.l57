@@ -77,14 +77,8 @@
     </nav>
 
     <main class="py-4">
-        @include('flash::message')
-
         @yield('content')
     </main>
 </div>
-
-<script>
-    $('#flash-overlay-modal').modal();
-</script>
 </body>
 </html>

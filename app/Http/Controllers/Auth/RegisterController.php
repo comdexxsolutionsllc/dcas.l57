@@ -3,11 +3,16 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\User;
+use App\Models\Roles\Customer as User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
+/**
+ * Class RegisterController
+ *
+ * @package App\Http\Controllers\Auth
+ */
 class RegisterController extends Controller
 {
 
@@ -62,7 +67,7 @@ class RegisterController extends Controller
      *
      * @param  array $data
      *
-     * @return \App\User
+     * @return \App\Models\Roles\Customer
      */
     protected function create(array $data): User
     {

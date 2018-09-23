@@ -9,8 +9,15 @@
   },
   "assets": [
     {
+      "name": "/fonts/ionicons.woff",
+      "size": 65912,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
       "name": "/js/app.js",
-      "size": 354934,
+      "size": 1644426,
       "chunks": [
         0
       ],
@@ -21,8 +28,71 @@
       "isOverSizeLimit": true
     },
     {
+      "name": "/fonts/fontawesome-webfont.eot",
+      "size": 165742,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/fontawesome-webfont.svg",
+      "size": 444379,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/fontawesome-webfont.ttf",
+      "size": 165548,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/fontawesome-webfont.woff",
+      "size": 98024,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/fontawesome-webfont.woff2",
+      "size": 77160,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/FontAwesome.otf",
+      "size": 134808,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/ionicons.eot",
+      "size": 112650,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/ionicons.svg",
+      "size": 312749,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/ionicons.ttf",
+      "size": 112472,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
       "name": "/css/app.css",
-      "size": 413143,
+      "size": 665065,
       "chunks": [
         0
       ],
@@ -31,6 +101,83 @@
       ],
       "emitted": true,
       "isOverSizeLimit": true
+    },
+    {
+      "name": "/fonts/ionicons.woff2",
+      "size": 50632,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/Material-Design-Iconic-Font.eot",
+      "size": 42495,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/Material-Design-Iconic-Font.svg",
+      "size": 239073,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/Material-Design-Iconic-Font.ttf",
+      "size": 99212,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/Material-Design-Iconic-Font.woff",
+      "size": 50312,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/Material-Design-Iconic-Font.woff2",
+      "size": 38384,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/Simple-Line-Icons.eot",
+      "size": 54266,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/Simple-Line-Icons.svg",
+      "size": 239045,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/Simple-Line-Icons.ttf",
+      "size": 54056,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/Simple-Line-Icons.woff",
+      "size": 81332,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
+    },
+    {
+      "name": "/fonts/Simple-Line-Icons.woff2",
+      "size": 30064,
+      "chunks": [],
+      "chunkNames": [],
+      "emitted": true
     }
   ],
   "filteredAssets": 0,

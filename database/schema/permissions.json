@@ -1,0 +1,29 @@
+[
+  {
+    "name": "deactivated"
+  },
+  {
+    "name": "marked_fraud"
+  },
+  {
+    "name": "api"
+  },
+  {
+    "name": "billing"
+  },
+  {
+    "name": "email"
+  },
+  {
+    "name": "email_announce_only"
+  },
+  {
+    "name": "email_emergency_only"
+  },
+  {
+    "name": "ssh"
+  },
+  {
+    "name": "ticketing"
+  }
+]

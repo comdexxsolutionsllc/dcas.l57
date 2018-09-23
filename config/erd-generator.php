@@ -8,7 +8,7 @@ return [
      * directories that contain your models.
      */
     'directories'   => [
-        app_path(),
+        app_path('Models'),
     ],
 
     /*

@@ -5,6 +5,11 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Horizon\Horizon;
 
+/**
+ * Class AppServiceProvider
+ *
+ * @package App\Providers
+ */
 class AppServiceProvider extends ServiceProvider
 {
 
@@ -25,6 +30,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        Horizon::routeMailNotificationsTo('example@example.com');
+        Horizon::routeMailNotificationsTo(env('MAIL_FROM_ADDRESS'));
     }
 }

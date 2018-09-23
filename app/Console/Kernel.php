@@ -2,6 +2,9 @@
 
 namespace App\Console;
 
+use App\Console\Commands\ClearProjectFiles;
+use App\Console\Commands\MakePHPDevelopmentReports;
+use App\Console\Commands\MakeTreeOutput;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -13,7 +16,11 @@ class Kernel extends ConsoleKernel
      *
      * @var array
      */
-    protected $commands = [];
+    protected $commands = [
+        ClearProjectFiles::class,
+        MakePHPDevelopmentReports::class,
+        MakeTreeOutput::class,
+    ];
 
     /**
      * Register the commands for the application.

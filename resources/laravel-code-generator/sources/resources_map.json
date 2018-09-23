@@ -1,0 +1,87 @@
+[
+  {
+    "model-name": "Comment",
+    "resource-file": "comments.json",
+    "table-name": "comments"
+  },
+  {
+    "model-name": "Department",
+    "resource-file": "departments.json",
+    "table-name": "departments"
+  },
+  {
+    "model-name": "Note",
+    "resource-file": "notes.json",
+    "table-name": "notes"
+  },
+  {
+    "model-name": "Status",
+    "resource-file": "statuses.json",
+    "table-name": "statuses"
+  },
+  {
+    "model-name": "Technician",
+    "resource-file": "technicians.json",
+    "table-name": "technicians"
+  },
+  {
+    "model-name": "Ticket",
+    "resource-file": "tickets.json",
+    "table-name": "tickets"
+  },
+  {
+    "model-name": "Notification",
+    "resource-file": "notifications.json",
+    "table-name": "notifications"
+  },
+  {
+    "model-name": "Permission",
+    "resource-file": "permissions.json",
+    "table-name": "permissions"
+  },
+  {
+    "model-name": "Role",
+    "resource-file": "roles.json",
+    "table-name": "roles"
+  },
+  {
+    "model-name": "Subscription",
+    "resource-file": "subscriptions.json",
+    "table-name": "subscriptions"
+  },
+  {
+    "model-name": "nameserver_domains",
+    "resource-file": "nameserver_domains.json",
+    "table-name": "nameserver_domains"
+  },
+  {
+    "model-name": "nameserver_records",
+    "resource-file": "nameserver_records.json",
+    "table-name": "nameserver_records"
+  },
+  {
+    "model-name": "nameserver_supermasters",
+    "resource-file": "nameserver_supermasters.json",
+    "table-name": "nameserver_supermasters"
+  },
+  {
+    "model-name": "nameserver_comments",
+    "resource-file": "nameserver_comments.json",
+    "table-name": "nameserver_comments"
+  },
+  {
+    "model-name": "nameserver_cryptokeys",
+    "resource-file": "nameserver_cryptokeys.json",
+    "table-name": "nameserver_cryptokeys"
+  },
+  {
+    "model-name": "nameserver_tsigkeys",
+    "resource-file": "nameserver_tsigkeys.json",
+    "table-name": "nameserver_tsigkeys"
+  },
+  {
+    "model-name": "nameserver_domainmetadata",
+    "resource-file": "nameserver_domainmetadatas.json",
+    "table-name": "nameserver_domainmetadata"
+  }
+]

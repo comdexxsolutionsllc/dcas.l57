@@ -1,737 +1,1879 @@
 {
-    "swagger": "2.0",
-    "info": {
-        "title": "Datacenter Automation Suite",
-        "description": "",
-        "version": "1.0.0"
-    },
-    "host": "http:\/\/dcas-l57.test",
-    "basePath": "\/",
-    "paths": {
-        "\/opcache-api\/clear": {
-            "get": {
-                "description": "GET \/opcache-api\/clear",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/opcache-api\/config": {
-            "get": {
-                "description": "GET \/opcache-api\/config",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/opcache-api\/status": {
-            "get": {
-                "description": "GET \/opcache-api\/status",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/opcache-api\/optimize": {
-            "get": {
-                "description": "GET \/opcache-api\/optimize",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/login": {
-            "get": {
-                "description": "GET \/login",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            },
-            "post": {
-                "description": "POST \/login",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/logout": {
-            "post": {
-                "description": "POST \/logout",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/register": {
-            "get": {
-                "description": "GET \/register",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            },
-            "post": {
-                "description": "POST \/register",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/password\/reset": {
-            "get": {
-                "description": "GET \/password\/reset",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            },
-            "post": {
-                "description": "POST \/password\/reset",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/password\/email": {
-            "post": {
-                "description": "POST \/password\/email",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/password\/reset\/{token}": {
-            "get": {
-                "description": "GET \/password\/reset\/{token}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "token",
-                        "type": "integer",
-                        "required": true,
-                        "description": ""
-                    }
-                ]
-            }
-        },
-        "\/home": {
-            "get": {
-                "description": "GET \/home",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/_debugbar\/open": {
-            "get": {
-                "description": "GET \/_debugbar\/open",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/_debugbar\/clockwork\/{id}": {
-            "get": {
-                "description": "GET \/_debugbar\/clockwork\/{id}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "type": "integer",
-                        "required": true,
-                        "description": ""
-                    }
-                ]
-            }
-        },
-        "\/_debugbar\/assets\/stylesheets": {
-            "get": {
-                "description": "GET \/_debugbar\/assets\/stylesheets",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/_debugbar\/assets\/javascript": {
-            "get": {
-                "description": "GET \/_debugbar\/assets\/javascript",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/_debugbar\/cache\/{key}\/{tags}": {
-            "delete": {
-                "description": "DELETE \/_debugbar\/cache\/{key}\/{tags}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "key",
-                        "type": "integer",
-                        "required": true,
-                        "description": ""
-                    },
-                    {
-                        "in": "path",
-                        "name": "tags",
-                        "type": "integer",
-                        "required": false,
-                        "description": ""
-                    }
-                ]
-            }
-        },
-        "\/_dusk\/login\/{userId}\/{guard}": {
-            "get": {
-                "description": "GET \/_dusk\/login\/{userId}\/{guard}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "userId",
-                        "type": "integer",
-                        "required": true,
-                        "description": ""
-                    },
-                    {
-                        "in": "path",
-                        "name": "guard",
-                        "type": "integer",
-                        "required": false,
-                        "description": ""
-                    }
-                ]
-            }
-        },
-        "\/_dusk\/logout\/{guard}": {
-            "get": {
-                "description": "GET \/_dusk\/logout\/{guard}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "guard",
-                        "type": "integer",
-                        "required": false,
-                        "description": ""
-                    }
-                ]
-            }
-        },
-        "\/_dusk\/user\/{guard}": {
-            "get": {
-                "description": "GET \/_dusk\/user\/{guard}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "guard",
-                        "type": "integer",
-                        "required": false,
-                        "description": ""
-                    }
-                ]
-            }
-        },
-        "\/horizon\/api\/stats": {
-            "get": {
-                "description": "GET \/horizon\/api\/stats",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/horizon\/api\/workload": {
-            "get": {
-                "description": "GET \/horizon\/api\/workload",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/horizon\/api\/masters": {
-            "get": {
-                "description": "GET \/horizon\/api\/masters",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/horizon\/api\/monitoring": {
-            "get": {
-                "description": "GET \/horizon\/api\/monitoring",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            },
-            "post": {
-                "description": "POST \/horizon\/api\/monitoring",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/horizon\/api\/monitoring\/{tag}": {
-            "get": {
-                "description": "GET \/horizon\/api\/monitoring\/{tag}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "tag",
-                        "type": "integer",
-                        "required": true,
-                        "description": ""
-                    }
-                ]
-            },
-            "delete": {
-                "description": "DELETE \/horizon\/api\/monitoring\/{tag}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "tag",
-                        "type": "integer",
-                        "required": true,
-                        "description": ""
-                    }
-                ]
-            }
-        },
-        "\/horizon\/api\/metrics\/jobs": {
-            "get": {
-                "description": "GET \/horizon\/api\/metrics\/jobs",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/horizon\/api\/metrics\/jobs\/{id}": {
-            "get": {
-                "description": "GET \/horizon\/api\/metrics\/jobs\/{id}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "type": "integer",
-                        "required": true,
-                        "description": ""
-                    }
-                ]
-            }
-        },
-        "\/horizon\/api\/metrics\/queues": {
-            "get": {
-                "description": "GET \/horizon\/api\/metrics\/queues",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/horizon\/api\/metrics\/queues\/{id}": {
-            "get": {
-                "description": "GET \/horizon\/api\/metrics\/queues\/{id}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "type": "integer",
-                        "required": true,
-                        "description": ""
-                    }
-                ]
-            }
-        },
-        "\/horizon\/api\/jobs\/recent": {
-            "get": {
-                "description": "GET \/horizon\/api\/jobs\/recent",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/horizon\/api\/jobs\/failed": {
-            "get": {
-                "description": "GET \/horizon\/api\/jobs\/failed",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/horizon\/api\/jobs\/failed\/{id}": {
-            "get": {
-                "description": "GET \/horizon\/api\/jobs\/failed\/{id}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "type": "integer",
-                        "required": true,
-                        "description": ""
-                    }
-                ]
-            }
-        },
-        "\/horizon\/api\/jobs\/retry\/{id}": {
-            "post": {
-                "description": "POST \/horizon\/api\/jobs\/retry\/{id}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "type": "integer",
-                        "required": true,
-                        "description": ""
-                    }
-                ]
-            }
-        },
-        "\/horizon\/{view}": {
-            "get": {
-                "description": "GET \/horizon\/{view}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "view",
-                        "type": "integer",
-                        "required": false,
-                        "description": ""
-                    }
-                ]
-            }
-        },
-        "\/oauth\/authorize": {
-            "get": {
-                "description": "GET \/oauth\/authorize",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            },
-            "post": {
-                "description": "POST \/oauth\/authorize",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            },
-            "delete": {
-                "description": "DELETE \/oauth\/authorize",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/oauth\/token": {
-            "post": {
-                "description": "POST \/oauth\/token",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/oauth\/tokens": {
-            "get": {
-                "description": "GET \/oauth\/tokens",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/oauth\/tokens\/{token_id}": {
-            "delete": {
-                "description": "DELETE \/oauth\/tokens\/{token_id}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "token_id",
-                        "type": "integer",
-                        "required": true,
-                        "description": ""
-                    }
-                ]
-            }
-        },
-        "\/oauth\/token\/refresh": {
-            "post": {
-                "description": "POST \/oauth\/token\/refresh",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/oauth\/clients": {
-            "get": {
-                "description": "GET \/oauth\/clients",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            },
-            "post": {
-                "description": "POST \/oauth\/clients",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/oauth\/clients\/{client_id}": {
-            "put": {
-                "description": "PUT \/oauth\/clients\/{client_id}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "client_id",
-                        "type": "integer",
-                        "required": true,
-                        "description": ""
-                    }
-                ]
-            },
-            "delete": {
-                "description": "DELETE \/oauth\/clients\/{client_id}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "client_id",
-                        "type": "integer",
-                        "required": true,
-                        "description": ""
-                    }
-                ]
-            }
-        },
-        "\/oauth\/scopes": {
-            "get": {
-                "description": "GET \/oauth\/scopes",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/oauth\/personal-access-tokens": {
-            "get": {
-                "description": "GET \/oauth\/personal-access-tokens",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            },
-            "post": {
-                "description": "POST \/oauth\/personal-access-tokens",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/oauth\/personal-access-tokens\/{token_id}": {
-            "delete": {
-                "description": "DELETE \/oauth\/personal-access-tokens\/{token_id}",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "token_id",
-                        "type": "integer",
-                        "required": true,
-                        "description": ""
-                    }
-                ]
-            }
-        },
-        "\/broadcasting\/auth": {
-            "get": {
-                "description": "GET \/broadcasting\/auth",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            },
-            "post": {
-                "description": "POST \/broadcasting\/auth",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/api\/user": {
-            "get": {
-                "description": "GET \/api\/user",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/api\/stripe\/webhook": {
-            "post": {
-                "description": "POST \/api\/stripe\/webhook",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "\/": {
-            "get": {
-                "description": "GET \/",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
+  "swagger": "2.0",
+  "info": {
+    "title": "Datacenter Automation Suite",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "host": "http:\/\/dcas-l57.test",
+  "basePath": "\/",
+  "paths": {
+    "\/opcache-api\/clear": {
+      "get": {
+        "description": "GET \/opcache-api\/clear",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
         }
+      }
+    },
+    "\/opcache-api\/config": {
+      "get": {
+        "description": "GET \/opcache-api\/config",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/opcache-api\/status": {
+      "get": {
+        "description": "GET \/opcache-api\/status",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/opcache-api\/optimize": {
+      "get": {
+        "description": "GET \/opcache-api\/optimize",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/_debugbar\/open": {
+      "get": {
+        "description": "GET \/_debugbar\/open",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/_debugbar\/clockwork\/{id}": {
+      "get": {
+        "description": "GET \/_debugbar\/clockwork\/{id}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/_debugbar\/assets\/stylesheets": {
+      "get": {
+        "description": "GET \/_debugbar\/assets\/stylesheets",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/_debugbar\/assets\/javascript": {
+      "get": {
+        "description": "GET \/_debugbar\/assets\/javascript",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/_debugbar\/cache\/{key}\/{tags}": {
+      "delete": {
+        "description": "DELETE \/_debugbar\/cache\/{key}\/{tags}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "key",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          },
+          {
+            "in": "path",
+            "name": "tags",
+            "type": "integer",
+            "required": false,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/internal\/docs": {
+      "get": {
+        "description": "GET \/internal\/docs",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/internal\/docs\/{version}\/{page}": {
+      "get": {
+        "description": "GET \/internal\/docs\/{version}\/{page}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "version",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          },
+          {
+            "in": "path",
+            "name": "page",
+            "type": "integer",
+            "required": false,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/_dusk\/login\/{userId}\/{guard}": {
+      "get": {
+        "description": "GET \/_dusk\/login\/{userId}\/{guard}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "userId",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          },
+          {
+            "in": "path",
+            "name": "guard",
+            "type": "integer",
+            "required": false,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/_dusk\/logout\/{guard}": {
+      "get": {
+        "description": "GET \/_dusk\/logout\/{guard}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "guard",
+            "type": "integer",
+            "required": false,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/_dusk\/user\/{guard}": {
+      "get": {
+        "description": "GET \/_dusk\/user\/{guard}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "guard",
+            "type": "integer",
+            "required": false,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/horizon\/api\/stats": {
+      "get": {
+        "description": "GET \/horizon\/api\/stats",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/horizon\/api\/workload": {
+      "get": {
+        "description": "GET \/horizon\/api\/workload",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/horizon\/api\/masters": {
+      "get": {
+        "description": "GET \/horizon\/api\/masters",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/horizon\/api\/monitoring": {
+      "get": {
+        "description": "GET \/horizon\/api\/monitoring",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/horizon\/api\/monitoring",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/horizon\/api\/monitoring\/{tag}": {
+      "get": {
+        "description": "GET \/horizon\/api\/monitoring\/{tag}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "tag",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      },
+      "delete": {
+        "description": "DELETE \/horizon\/api\/monitoring\/{tag}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "tag",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/horizon\/api\/metrics\/jobs": {
+      "get": {
+        "description": "GET \/horizon\/api\/metrics\/jobs",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/horizon\/api\/metrics\/jobs\/{id}": {
+      "get": {
+        "description": "GET \/horizon\/api\/metrics\/jobs\/{id}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/horizon\/api\/metrics\/queues": {
+      "get": {
+        "description": "GET \/horizon\/api\/metrics\/queues",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/horizon\/api\/metrics\/queues\/{id}": {
+      "get": {
+        "description": "GET \/horizon\/api\/metrics\/queues\/{id}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/horizon\/api\/jobs\/recent": {
+      "get": {
+        "description": "GET \/horizon\/api\/jobs\/recent",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/horizon\/api\/jobs\/failed": {
+      "get": {
+        "description": "GET \/horizon\/api\/jobs\/failed",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/horizon\/api\/jobs\/failed\/{id}": {
+      "get": {
+        "description": "GET \/horizon\/api\/jobs\/failed\/{id}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/horizon\/api\/jobs\/retry\/{id}": {
+      "post": {
+        "description": "POST \/horizon\/api\/jobs\/retry\/{id}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/horizon\/{view}": {
+      "get": {
+        "description": "GET \/horizon\/{view}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "view",
+            "type": "integer",
+            "required": false,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/oauth\/authorize": {
+      "get": {
+        "description": "GET \/oauth\/authorize",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/oauth\/authorize",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "description": "DELETE \/oauth\/authorize",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/oauth\/token": {
+      "post": {
+        "description": "POST \/oauth\/token",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/oauth\/tokens": {
+      "get": {
+        "description": "GET \/oauth\/tokens",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/oauth\/tokens\/{token_id}": {
+      "delete": {
+        "description": "DELETE \/oauth\/tokens\/{token_id}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "token_id",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/oauth\/token\/refresh": {
+      "post": {
+        "description": "POST \/oauth\/token\/refresh",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/oauth\/clients": {
+      "get": {
+        "description": "GET \/oauth\/clients",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/oauth\/clients",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/oauth\/clients\/{client_id}": {
+      "put": {
+        "description": "PUT \/oauth\/clients\/{client_id}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "client_id",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      },
+      "delete": {
+        "description": "DELETE \/oauth\/clients\/{client_id}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "client_id",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/oauth\/scopes": {
+      "get": {
+        "description": "GET \/oauth\/scopes",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/oauth\/personal-access-tokens": {
+      "get": {
+        "description": "GET \/oauth\/personal-access-tokens",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/oauth\/personal-access-tokens",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/oauth\/personal-access-tokens\/{token_id}": {
+      "delete": {
+        "description": "DELETE \/oauth\/personal-access-tokens\/{token_id}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "token_id",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/broadcasting\/auth": {
+      "get": {
+        "description": "GET \/broadcasting\/auth",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/broadcasting\/auth",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/api\/user": {
+      "get": {
+        "description": "GET \/api\/user",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/api\/stripe\/webhook": {
+      "post": {
+        "description": "POST \/api\/stripe\/webhook",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/": {
+      "get": {
+        "description": "GET \/",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/login": {
+      "get": {
+        "description": "GET \/login",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/login",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/logout": {
+      "post": {
+        "description": "POST \/logout",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/register": {
+      "get": {
+        "description": "GET \/register",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/register",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/password\/reset": {
+      "get": {
+        "description": "GET \/password\/reset",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/password\/reset",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/password\/email": {
+      "post": {
+        "description": "POST \/password\/email",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/password\/reset\/{token}": {
+      "get": {
+        "description": "GET \/password\/reset\/{token}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "token",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard": {
+      "get": {
+        "description": "GET \/dashboard",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/comments": {
+      "get": {
+        "description": "GET \/dashboard\/comments",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/dashboard\/comments",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/comments\/create": {
+      "get": {
+        "description": "GET \/dashboard\/comments\/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/comments\/show\/{comment}": {
+      "get": {
+        "description": "GET \/dashboard\/comments\/show\/{comment}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "comment",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/comments\/{comment}\/edit": {
+      "get": {
+        "description": "GET \/dashboard\/comments\/{comment}\/edit",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "comment",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/comments\/comment\/{comment}": {
+      "put": {
+        "description": "PUT \/dashboard\/comments\/comment\/{comment}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "comment",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      },
+      "delete": {
+        "description": "DELETE \/dashboard\/comments\/comment\/{comment}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "comment",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/departments": {
+      "get": {
+        "description": "GET \/dashboard\/departments",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/dashboard\/departments",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/departments\/create": {
+      "get": {
+        "description": "GET \/dashboard\/departments\/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/departments\/show\/{department}": {
+      "get": {
+        "description": "GET \/dashboard\/departments\/show\/{department}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "department",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/departments\/{department}\/edit": {
+      "get": {
+        "description": "GET \/dashboard\/departments\/{department}\/edit",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "department",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/departments\/department\/{department}": {
+      "put": {
+        "description": "PUT \/dashboard\/departments\/department\/{department}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "department",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      },
+      "delete": {
+        "description": "DELETE \/dashboard\/departments\/department\/{department}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "department",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/notes": {
+      "get": {
+        "description": "GET \/dashboard\/notes",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/dashboard\/notes",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/notes\/create": {
+      "get": {
+        "description": "GET \/dashboard\/notes\/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/notes\/show\/{note}": {
+      "get": {
+        "description": "GET \/dashboard\/notes\/show\/{note}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "note",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/notes\/{note}\/edit": {
+      "get": {
+        "description": "GET \/dashboard\/notes\/{note}\/edit",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "note",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/notes\/note\/{note}": {
+      "put": {
+        "description": "PUT \/dashboard\/notes\/note\/{note}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "note",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      },
+      "delete": {
+        "description": "DELETE \/dashboard\/notes\/note\/{note}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "note",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/notifications": {
+      "get": {
+        "description": "GET \/dashboard\/notifications",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/dashboard\/notifications",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/notifications\/create": {
+      "get": {
+        "description": "GET \/dashboard\/notifications\/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/notifications\/show\/{notification}": {
+      "get": {
+        "description": "GET \/dashboard\/notifications\/show\/{notification}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "notification",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/notifications\/{notification}\/edit": {
+      "get": {
+        "description": "GET \/dashboard\/notifications\/{notification}\/edit",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "notification",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/notifications\/notification\/{notification}": {
+      "put": {
+        "description": "PUT \/dashboard\/notifications\/notification\/{notification}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "notification",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      },
+      "delete": {
+        "description": "DELETE \/dashboard\/notifications\/notification\/{notification}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "notification",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/permissions": {
+      "get": {
+        "description": "GET \/dashboard\/permissions",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/dashboard\/permissions",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/permissions\/create": {
+      "get": {
+        "description": "GET \/dashboard\/permissions\/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/permissions\/show\/{permission}": {
+      "get": {
+        "description": "GET \/dashboard\/permissions\/show\/{permission}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "permission",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/permissions\/{permission}\/edit": {
+      "get": {
+        "description": "GET \/dashboard\/permissions\/{permission}\/edit",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "permission",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/permissions\/permission\/{permission}": {
+      "put": {
+        "description": "PUT \/dashboard\/permissions\/permission\/{permission}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "permission",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      },
+      "delete": {
+        "description": "DELETE \/dashboard\/permissions\/permission\/{permission}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "permission",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/roles": {
+      "get": {
+        "description": "GET \/dashboard\/roles",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/dashboard\/roles",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/roles\/create": {
+      "get": {
+        "description": "GET \/dashboard\/roles\/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/roles\/show\/{role}": {
+      "get": {
+        "description": "GET \/dashboard\/roles\/show\/{role}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "role",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/roles\/{role}\/edit": {
+      "get": {
+        "description": "GET \/dashboard\/roles\/{role}\/edit",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "role",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/roles\/role\/{role}": {
+      "put": {
+        "description": "PUT \/dashboard\/roles\/role\/{role}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "role",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      },
+      "delete": {
+        "description": "DELETE \/dashboard\/roles\/role\/{role}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "role",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/statuses": {
+      "get": {
+        "description": "GET \/dashboard\/statuses",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/dashboard\/statuses",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/statuses\/create": {
+      "get": {
+        "description": "GET \/dashboard\/statuses\/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/statuses\/show\/{status}": {
+      "get": {
+        "description": "GET \/dashboard\/statuses\/show\/{status}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "status",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/statuses\/{status}\/edit": {
+      "get": {
+        "description": "GET \/dashboard\/statuses\/{status}\/edit",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "status",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/statuses\/status\/{status}": {
+      "put": {
+        "description": "PUT \/dashboard\/statuses\/status\/{status}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "status",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      },
+      "delete": {
+        "description": "DELETE \/dashboard\/statuses\/status\/{status}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "status",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/subscriptions": {
+      "get": {
+        "description": "GET \/dashboard\/subscriptions",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/dashboard\/subscriptions",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/subscriptions\/create": {
+      "get": {
+        "description": "GET \/dashboard\/subscriptions\/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/subscriptions\/show\/{subscription}": {
+      "get": {
+        "description": "GET \/dashboard\/subscriptions\/show\/{subscription}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subscription",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/subscriptions\/{subscription}\/edit": {
+      "get": {
+        "description": "GET \/dashboard\/subscriptions\/{subscription}\/edit",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subscription",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/subscriptions\/subscription\/{subscription}": {
+      "put": {
+        "description": "PUT \/dashboard\/subscriptions\/subscription\/{subscription}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subscription",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      },
+      "delete": {
+        "description": "DELETE \/dashboard\/subscriptions\/subscription\/{subscription}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "subscription",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/tickets": {
+      "get": {
+        "description": "GET \/dashboard\/tickets",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/dashboard\/tickets",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/tickets\/create": {
+      "get": {
+        "description": "GET \/dashboard\/tickets\/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/tickets\/show\/{ticket}": {
+      "get": {
+        "description": "GET \/dashboard\/tickets\/show\/{ticket}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ticket",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/tickets\/{ticket}\/edit": {
+      "get": {
+        "description": "GET \/dashboard\/tickets\/{ticket}\/edit",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ticket",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/tickets\/ticket\/{ticket}": {
+      "put": {
+        "description": "PUT \/dashboard\/tickets\/ticket\/{ticket}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ticket",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      },
+      "delete": {
+        "description": "DELETE \/dashboard\/tickets\/ticket\/{ticket}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "ticket",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/users": {
+      "get": {
+        "description": "GET \/dashboard\/users",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "POST \/dashboard\/users",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/users\/create": {
+      "get": {
+        "description": "GET \/dashboard\/users\/create",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/dashboard\/users\/show\/{user}": {
+      "get": {
+        "description": "GET \/dashboard\/users\/show\/{user}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/users\/{user}\/edit": {
+      "get": {
+        "description": "GET \/dashboard\/users\/{user}\/edit",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/dashboard\/users\/user\/{user}": {
+      "put": {
+        "description": "PUT \/dashboard\/users\/user\/{user}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      },
+      "delete": {
+        "description": "DELETE \/dashboard\/users\/user\/{user}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "user",
+            "type": "integer",
+            "required": true,
+            "description": ""
+          }
+        ]
+      }
+    },
+    "\/about-us": {
+      "get": {
+        "description": "GET \/about-us",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/pricing": {
+      "get": {
+        "description": "GET \/pricing",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/inbox": {
+      "get": {
+        "description": "GET \/inbox",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/cart": {
+      "get": {
+        "description": "GET \/cart",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/support": {
+      "get": {
+        "description": "GET \/support",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "\/graphql\/{graphql_schema}": {
+      "get": {
+        "description": "GET \/graphql\/{graphql_schema}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "graphql_schema",
+            "type": "integer",
+            "required": false,
+            "description": ""
+          }
+        ]
+      },
+      "post": {
+        "description": "POST \/graphql\/{graphql_schema}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "graphql_schema",
+            "type": "integer",
+            "required": false,
+            "description": ""
+          }
+        ]
+      }
     }
+  }
 }

@@ -63,6 +63,11 @@ Vue.component(
     require('./components/passport/PersonalAccessTokens.vue')
 );
 
+Vue.component(
+    'tiptap-editor',
+    require('./components/TiptapEditor.vue')
+);
+
 const app = new Vue({
     el: '#app'
 });

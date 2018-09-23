@@ -1,0 +1,92 @@
+[
+  {
+    "name": "abuse"
+  },
+  {
+    "name": "accounting"
+  },
+  {
+    "name": "billing"
+  },
+  {
+    "name": "collections"
+  },
+  {
+    "name": "demo"
+  },
+  {
+    "name": "development"
+  },
+  {
+    "name": "employee"
+  },
+  {
+    "name": "guest"
+  },
+  {
+    "name": "hardware"
+  },
+  {
+    "name": "humanresources"
+  },
+  {
+    "name": "infrastructure"
+  },
+  {
+    "name": "investorrelations"
+  },
+  {
+    "name": "legal"
+  },
+  {
+    "name": "managers"
+  },
+  {
+    "name": "marketing"
+  },
+  {
+    "name": "networking"
+  },
+  {
+    "name": "operations"
+  },
+  {
+    "name": "peeringcoordination"
+  },
+  {
+    "name": "provisioning"
+  },
+  {
+    "name": "qualitycontrol"
+  },
+  {
+    "name": "receptionist"
+  },
+  {
+    "name": "sales"
+  },
+  {
+    "name": "security"
+  },
+  {
+    "name": "superadmin"
+  },
+  {
+    "name": "supportlevel1"
+  },
+  {
+    "name": "supportlevel2"
+  },
+  {
+    "name": "systemsadministration"
+  },
+  {
+    "name": "vendorrelations"
+  },
+  {
+    "name": "webmaster"
+  },
+  {
+    "name": "whitegloves"
+  }
+]

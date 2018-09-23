@@ -14,8 +14,8 @@ return [
     */
 
     'defaults' => [
-        'guard'     => 'web',
-        'passwords' => 'users',
+        'guard'     => 'customer',
+        'passwords' => 'customers',
     ],
 
     /*
@@ -36,14 +36,29 @@ return [
     */
 
     'guards' => [
-        'web' => [
+        'customer' => [
             'driver'   => 'session',
-            'provider' => 'users',
+            'provider' => 'customers',
         ],
 
         'api' => [
             'driver'   => 'token',
-            'provider' => 'users',
+            'provider' => 'customers',
+        ],
+
+        'employee' => [
+            'driver'   => 'session',
+            'provider' => 'employees',
+        ],
+
+        'vendor' => [
+            'driver'   => 'session',
+            'provider' => 'vendors',
+        ],
+
+        'whitegloves' => [
+            'driver'   => 'session',
+            'provider' => 'whitegloves',
         ],
     ],
 
@@ -65,11 +80,22 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'customers'   => [
             'driver' => 'eloquent',
-            'model'  => App\User::class,
+            'model'  => App\Models\Roles\Customer::class,
         ],
-
+        'employees'   => [
+            'driver' => 'eloquent',
+            'model'  => App\Models\Roles\Employee::class,
+        ],
+        'vendors'     => [
+            'driver' => 'eloquent',
+            'model'  => App\Models\Roles\Vendor::class,
+        ],
+        'whitegloves' => [
+            'driver' => 'eloquent',
+            'model'  => App\Models\Roles\WhiteGlove::class,
+        ],
     ],
 
     /*
@@ -88,10 +114,25 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
+        'customers'   => [
+            'provider' => 'customers',
             'table'    => 'password_resets',
-            'expire'   => 15,
+            'expire'   => 30,
+        ],
+        'employees'   => [
+            'provider' => 'employees',
+            'table'    => 'password_resets',
+            'expire'   => 10,
+        ],
+        'vendors'     => [
+            'provider' => 'vendors',
+            'table'    => 'password_resets',
+            'expire'   => 0,
+        ],
+        'whitegloves' => [
+            'provider' => 'whitegloves',
+            'table'    => 'password_resets',
+            'expire'   => 0,
         ],
     ],
 

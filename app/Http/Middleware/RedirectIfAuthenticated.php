@@ -3,7 +3,6 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Support\Facades\Auth;
 
 class RedirectIfAuthenticated
 {
@@ -19,8 +18,29 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check()) {
-            return redirect('/dashboard');
+        switch ($guard) {
+            case 'customer':
+                if (\Auth::guard($guard)->check()) {
+                    return redirect()->route('home');
+                }
+                break;
+            case 'employee':
+                if (\Auth::guard($guard)->check()) {
+                    return redirect()->route('employee.home');
+                }
+                break;
+            case 'vendor':
+                if (\Auth::guard($guard)->check()) {
+                    return redirect()->route('vendor.home');
+                }
+                break;
+            case 'whitegloves':
+                if (\Auth::guard($guard)->check()) {
+                    return redirect()->route('whitegloves.home');
+                }
+                break;
+            default:
+                break;
         }
 
         return $next($request);
