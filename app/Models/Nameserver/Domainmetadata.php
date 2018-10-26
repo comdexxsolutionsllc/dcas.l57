@@ -2,18 +2,22 @@
 
 namespace App\Models\Nameserver;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\BaseModel;
 
 /**
  * App\Models\Nameserver\Domainmetadata
  *
- * @property int $id
- * @property int $domain_id
- * @property string|null $kind
- * @property string|null $content
- * @property array $created_at
- * @property array $updated_at
- * @property-read \App\Models\Nameserver\Domain $domain
+ * @property int                                                                             $id
+ * @property int                                                                             $domain_id
+ * @property string|null                                                                     $kind
+ * @property string|null                                                                     $content
+ * @property array                                                                           $created_at
+ * @property array                                                                           $updated_at
+ * @property-read \App\Models\Nameserver\Domain                                              $domain
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Domainmetadata newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Domainmetadata newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Domainmetadata query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Domainmetadata whereContent($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Domainmetadata whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Domainmetadata whereDomainId($value)
@@ -22,7 +26,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Domainmetadata whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class Domainmetadata extends Model
+class Domainmetadata extends BaseModel
 {
 
     /**
@@ -54,7 +58,7 @@ class Domainmetadata extends Model
     /**
      * Get created_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return array
      */
@@ -66,12 +70,36 @@ class Domainmetadata extends Model
     /**
      * Get updated_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return array
      */
     public function getUpdatedAtAttribute($value)
     {
         return \DateTime::createFromFormat('j/n/Y g:i A', $value);
+    }
+
+    /**
+     * Get the index name for the model.
+     *
+     * @return string
+     */
+    public function searchableAs(): string
+    {
+        return 'nameserver_domainmetadata_index';
+    }
+
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array
+     */
+    public function toSearchableArray(): array
+    {
+        $array = $this->toArray();
+
+        // Customize array...
+
+        return $array;
     }
 }

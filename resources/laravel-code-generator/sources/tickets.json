@@ -69,10 +69,10 @@
         "name": "ticket",
         "type": "belongsTo",
         "params": [
-          "App\\Models\\Ticket",
+          "App\\Models\\GENERATED\\Ticket",
           "ticket_id"
         ],
-        "field": "id"
+        "field": "title"
       },
       "foreign-constraint": null,
       "on-store": null,
@@ -181,7 +181,7 @@
         "name": "status",
         "type": "belongsTo",
         "params": [
-          "App\\Models\\Status",
+          "App\\Models\\GENERATED\\Status",
           "status_id"
         ],
         "field": "name"
@@ -223,8 +223,50 @@
         "name": "department",
         "type": "belongsTo",
         "params": [
-          "App\\Models\\Department",
+          "App\\Models\\GENERATED\\Department",
           "department_id"
+        ],
+        "field": "name"
+      },
+      "foreign-constraint": null,
+      "on-store": null,
+      "on-update": null
+    },
+    {
+      "name": "user_id",
+      "labels": "User",
+      "html-type": "select",
+      "css-class": "",
+      "options": {},
+      "html-value": null,
+      "validation": "required",
+      "is-on-index": false,
+      "is-on-show": true,
+      "is-on-form": true,
+      "data-type": "int",
+      "data-type-params": [],
+      "data-value": null,
+      "is-index": true,
+      "is-unique": false,
+      "is-primary": false,
+      "comment": null,
+      "is-nullable": false,
+      "is-header": false,
+      "is-unsigned": true,
+      "is-auto-increment": false,
+      "is-inline-options": false,
+      "is-date": false,
+      "date-format": "",
+      "cast-as": "",
+      "placeholder": "Select user",
+      "delimiter": "; ",
+      "range": [],
+      "foreign-relation": {
+        "name": "user",
+        "type": "belongsTo",
+        "params": [
+          "App\\Models\\GENERATED\\User",
+          "user_id"
         ],
         "field": "name"
       },
@@ -265,7 +307,7 @@
         "name": "technicianAssigned",
         "type": "belongsTo",
         "params": [
-          "App\\Models\\TechnicianAssigned",
+          "App\\Models\\GENERATED\\TechnicianAssigned",
           "technician_assigned_id"
         ],
         "field": "id"

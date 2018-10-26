@@ -3,7 +3,13 @@
 namespace App\Exceptions;
 
 use Exception;
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Session\TokenMismatchException;
+use Illuminate\Validation\ValidationException;
+use Opis\Closure\SecurityException;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class Handler extends ExceptionHandler
 {
@@ -13,7 +19,13 @@ class Handler extends ExceptionHandler
      *
      * @var array
      */
-    protected $dontReport = [];
+    protected $dontReport = [
+        AuthorizationException::class,
+        HttpException::class,
+        ModelNotFoundException::class,
+        TokenMismatchException::class,
+        ValidationException::class,
+    ];
 
     /**
      * A list of the inputs that are never flashed for validation exceptions.
@@ -28,16 +40,20 @@ class Handler extends ExceptionHandler
     /**
      * Render an exception into an HTTP response.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \Exception               $exception
+     * @param \Illuminate\Http\Request $request
+     * @param \Exception               $exception
      *
      * @return \Illuminate\Http\Response
      */
     public function render($request, Exception $exception)
     {
-        //if ($exception instanceof \Spatie\Permission\Exceptions\UnauthorizedException) {
-        //    // Code here ...
-        //}
+        if ($exception instanceof ModelNotFoundException && $request->isJson()) {
+            return \Route::respondWithRoute('api.fallback.404');
+        }
+
+        if ($exception instanceof SecurityException) {
+            return view('errors.security-exception');
+        }
 
         return parent::render($request, $exception);
     }
@@ -45,14 +61,16 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * @param  \Exception $exception
-     *
-     * @return void
+     * @param \Exception $exception
      *
      * @throws \Exception
      */
     public function report(Exception $exception)
     {
+//        if (app()->bound('sentry')) {
+//            app('log')->info('Submitted exception to Sentry with id:' . app('sentry')->captureException($exception));
+//        }
+
         parent::report($exception);
     }
 }

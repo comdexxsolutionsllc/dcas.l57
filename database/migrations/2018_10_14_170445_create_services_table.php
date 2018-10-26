@@ -17,11 +17,11 @@ class CreateServicesTable extends Migration
         Schema::create('services', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('account_id')->unsigned();
+            $table->string('account_type');
             $table->string('service_type');
             $table->string('status');
             $table->timestamp('last_payment')->nullable();
             $table->timestamp('last_invoice')->nullable();
-
             $table->timestamps();
         });
     }

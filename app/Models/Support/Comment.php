@@ -2,17 +2,21 @@
 
 namespace App\Models\Support;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\BaseModel;
 
 /**
  * App\Models\Support\Comment
  *
- * @property int $id
- * @property string $body
- * @property string $commentable_type
- * @property int $commentable_id
- * @property bool|\DateTime $created_at
- * @property bool|\DateTime $updated_at
+ * @property int                                                                             $id
+ * @property string                                                                          $body
+ * @property string                                                                          $commentable_type
+ * @property int                                                                             $commentable_id
+ * @property bool|\DateTime                                                                  $created_at
+ * @property bool|\DateTime                                                                  $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Comment newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Comment newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Comment query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Comment whereBody($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Comment whereCommentableId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Comment whereCommentableType($value)
@@ -21,22 +25,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Comment whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class Comment extends Model
+class Comment extends BaseModel
 {
-
-    /**
-     * The database table used by the model.
-     *
-     * @var string
-     */
-    protected $table = 'comments';
-
-    /**
-     * The database primary key value.
-     *
-     * @var string
-     */
-    protected $primaryKey = 'id';
 
     /**
      * Attributes that should be mass-assignable.
@@ -50,23 +40,9 @@ class Comment extends Model
     ];
 
     /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
-    protected $dates = [];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [];
-
-    /**
      * Get created_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */
@@ -78,7 +54,7 @@ class Comment extends Model
     /**
      * Get updated_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */

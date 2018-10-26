@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Website\Menu;
+use App\Policies\MenuPolicy;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Laravel\Passport\Passport;
 
@@ -19,7 +21,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'App\Model' => 'App\Policies\ModelPolicy',
+        Menu::class => MenuPolicy::class,
     ];
 
     /**

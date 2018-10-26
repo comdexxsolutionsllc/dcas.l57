@@ -180,7 +180,7 @@
       "name": "modelHasPermission",
       "type": "hasOne",
       "params": [
-        "App\\Models\\ModelHasPermission",
+        "App\\Models\\GENERATED\\ModelHasPermission",
         "permission_id",
         "id"
       ],
@@ -190,7 +190,7 @@
       "name": "roleHasPermission",
       "type": "hasOne",
       "params": [
-        "App\\Models\\RoleHasPermission",
+        "App\\Models\\GENERATED\\RoleHasPermission",
         "permission_id",
         "id"
       ],

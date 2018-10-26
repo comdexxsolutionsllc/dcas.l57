@@ -7,15 +7,18 @@ use Spatie\Permission\Models\Permission as BasePermission;
 /**
  * App\Models\General\Permission
  *
- * @property int $id
- * @property string $name
- * @property string $guard_name
- * @property bool|\DateTime $created_at
- * @property bool|\DateTime $updated_at
+ * @property int                                                                                  $id
+ * @property string                                                                               $name
+ * @property string                                                                               $guard_name
+ * @property bool|\DateTime                                                                       $created_at
+ * @property bool|\DateTime                                                                       $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Permission\Models\Permission[] $permissions
- * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Permission\Models\Role[] $roles
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Roles\Customer[] $users
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Permission\Models\Role[]       $roles
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Roles\Customer[]           $users
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Permission newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Permission newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Permission\Models\Permission permission($permissions)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Permission query()
  * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Permission\Models\Permission role($roles)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Permission whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Permission whereGuardName($value)
@@ -28,20 +31,6 @@ class Permission extends BasePermission
 {
 
     /**
-     * The database table used by the model.
-     *
-     * @var string
-     */
-    protected $table = 'permissions';
-
-    /**
-     * The database primary key value.
-     *
-     * @var string
-     */
-    protected $primaryKey = 'id';
-
-    /**
      * Attributes that should be mass-assignable.
      *
      * @var array
@@ -52,23 +41,9 @@ class Permission extends BasePermission
     ];
 
     /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
-    protected $dates = [];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [];
-
-    /**
      * Get created_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */
@@ -80,7 +55,7 @@ class Permission extends BasePermission
     /**
      * Get updated_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */

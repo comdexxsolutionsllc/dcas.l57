@@ -67,7 +67,7 @@
         "name": "user",
         "type": "belongsTo",
         "params": [
-          "App\\Models\\User",
+          "App\\Models\\GENERATED\\User",
           "user_id"
         ],
         "field": "name"
@@ -147,7 +147,7 @@
         "name": "stripe",
         "type": "belongsTo",
         "params": [
-          "App\\Models\\Stripe",
+          "App\\Models\\GENERATED\\Stripe",
           "stripe_id"
         ],
         "field": "id"

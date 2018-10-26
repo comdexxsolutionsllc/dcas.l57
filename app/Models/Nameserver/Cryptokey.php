@@ -2,19 +2,23 @@
 
 namespace App\Models\Nameserver;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\BaseModel;
 
 /**
  * App\Models\Nameserver\Cryptokey
  *
- * @property int $id
- * @property int $domain_id
- * @property int $flags
- * @property int|null $active
- * @property string|null $content
- * @property array $created_at
- * @property array $updated_at
- * @property-read \App\Models\Nameserver\Domain $domain
+ * @property int                                                                             $id
+ * @property int                                                                             $domain_id
+ * @property int                                                                             $flags
+ * @property int|null                                                                        $active
+ * @property string|null                                                                     $content
+ * @property array                                                                           $created_at
+ * @property array                                                                           $updated_at
+ * @property-read \App\Models\Nameserver\Domain                                              $domain
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Cryptokey newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Cryptokey newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Cryptokey query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Cryptokey whereActive($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Cryptokey whereContent($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Cryptokey whereCreatedAt($value)
@@ -24,7 +28,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Cryptokey whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class Cryptokey extends Model
+class Cryptokey extends BaseModel
 {
 
     /**
@@ -57,7 +61,7 @@ class Cryptokey extends Model
     /**
      * Get created_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return array
      */
@@ -69,12 +73,36 @@ class Cryptokey extends Model
     /**
      * Get updated_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return array
      */
     public function getUpdatedAtAttribute($value)
     {
         return \DateTime::createFromFormat('j/n/Y g:i A', $value);
+    }
+
+    /**
+     * Get the index name for the model.
+     *
+     * @return string
+     */
+    public function searchableAs(): string
+    {
+        return 'nameserver_cryptokey_index';
+    }
+
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array
+     */
+    public function toSearchableArray(): array
+    {
+        $array = $this->toArray();
+
+        // Customize array...
+
+        return $array;
     }
 }

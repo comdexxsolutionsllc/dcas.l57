@@ -1,0 +1,14 @@
+<?php
+
+namespace $NAMESPACE_MODEL$;
+
+use Illuminate\Database\Eloquent\Model;
+
+class $MODEL_NAME$Translation extends Model
+{
+    protected $table = '$SNAKE_CASED_MODEL_NAME$_translations';
+
+    public $fillable = [
+        //TODO: Same as model's translatedAttributes
+    ];
+}

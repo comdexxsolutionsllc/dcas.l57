@@ -10,7 +10,7 @@ namespace App\General;
 class EmployeeId
 {
 
-    const LOWER_BOUNDS = 4;
+    protected const LOWER_BOUNDS = 4;
 
     /**
      * Generate a employee identification number.

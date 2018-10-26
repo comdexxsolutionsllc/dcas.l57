@@ -1,8 +1,38 @@
 [
   {
-    "model-name": "Comment",
-    "resource-file": "comments.json",
-    "table-name": "comments"
+    "model-name": "AboutUs",
+    "resource-file": "about_uses.json",
+    "table-name": "about_us"
+  },
+  {
+    "model-name": "Asset",
+    "resource-file": "assets.json",
+    "table-name": "assets"
+  },
+  {
+    "model-name": "BillingInfo",
+    "resource-file": "billing_infos.json",
+    "table-name": "billing_info"
+  },
+  {
+    "model-name": "Company",
+    "resource-file": "companies.json",
+    "table-name": "companies"
+  },
+  {
+    "model-name": "Cryptokey",
+    "resource-file": "cryptokeys.json",
+    "table-name": "nameserver_cryptokeys"
+  },
+  {
+    "model-name": "Customer",
+    "resource-file": "customers.json",
+    "table-name": "customers"
+  },
+  {
+    "model-name": "Datacenter",
+    "resource-file": "datacenters.json",
+    "table-name": "datacenters"
   },
   {
     "model-name": "Department",
@@ -10,24 +40,49 @@
     "table-name": "departments"
   },
   {
+    "model-name": "Domainmetadata",
+    "resource-file": "domainmetadatas.json",
+    "table-name": "nameserver_domainmetadata"
+  },
+  {
+    "model-name": "Employee",
+    "resource-file": "employees.json",
+    "table-name": "employees"
+  },
+  {
+    "model-name": "Invoice",
+    "resource-file": "invoices.json",
+    "table-name": "invoices"
+  },
+  {
+    "model-name": "InvoiceItem",
+    "resource-file": "invoice_items.json",
+    "table-name": "invoice_items"
+  },
+  {
+    "model-name": "Menu",
+    "resource-file": "menus.json",
+    "table-name": "menus"
+  },
+  {
+    "model-name": "NetworkConfiguration",
+    "resource-file": "network_configurations.json",
+    "table-name": "network_configurations"
+  },
+  {
+    "model-name": "NetworkDevice",
+    "resource-file": "network_devices.json",
+    "table-name": "network_devices"
+  },
+  {
+    "model-name": "NetworkDeviceType",
+    "resource-file": "network_device_types.json",
+    "table-name": "network_device_types"
+  },
+  {
     "model-name": "Note",
     "resource-file": "notes.json",
     "table-name": "notes"
-  },
-  {
-    "model-name": "Status",
-    "resource-file": "statuses.json",
-    "table-name": "statuses"
-  },
-  {
-    "model-name": "Technician",
-    "resource-file": "technicians.json",
-    "table-name": "technicians"
-  },
-  {
-    "model-name": "Ticket",
-    "resource-file": "tickets.json",
-    "table-name": "tickets"
   },
   {
     "model-name": "Notification",
@@ -35,9 +90,34 @@
     "table-name": "notifications"
   },
   {
+    "model-name": "OperatingSystem",
+    "resource-file": "operating_systems.json",
+    "table-name": "operating_systems"
+  },
+  {
     "model-name": "Permission",
     "resource-file": "permissions.json",
     "table-name": "permissions"
+  },
+  {
+    "model-name": "Queue",
+    "resource-file": "queues.json",
+    "table-name": "queues"
+  },
+  {
+    "model-name": "Record",
+    "resource-file": "records.json",
+    "table-name": "nameserver_records"
+  },
+  {
+    "model-name": "Registrar",
+    "resource-file": "registrars.json",
+    "table-name": "registrars"
+  },
+  {
+    "model-name": "Reseller",
+    "resource-file": "resellers.json",
+    "table-name": "resellers"
   },
   {
     "model-name": "Role",
@@ -45,43 +125,98 @@
     "table-name": "roles"
   },
   {
+    "model-name": "SalesRep",
+    "resource-file": "sales_reps.json",
+    "table-name": "sales_reps"
+  },
+  {
+    "model-name": "Service",
+    "resource-file": "services.json",
+    "table-name": "services"
+  },
+  {
+    "model-name": "Status",
+    "resource-file": "statuses.json",
+    "table-name": "statuses"
+  },
+  {
+    "model-name": "SubMenu",
+    "resource-file": "sub_menus.json",
+    "table-name": "sub_menus"
+  },
+  {
     "model-name": "Subscription",
     "resource-file": "subscriptions.json",
     "table-name": "subscriptions"
   },
   {
-    "model-name": "nameserver_domains",
-    "resource-file": "nameserver_domains.json",
-    "table-name": "nameserver_domains"
-  },
-  {
-    "model-name": "nameserver_records",
-    "resource-file": "nameserver_records.json",
-    "table-name": "nameserver_records"
-  },
-  {
-    "model-name": "nameserver_supermasters",
-    "resource-file": "nameserver_supermasters.json",
+    "model-name": "Supermaster",
+    "resource-file": "supermasters.json",
     "table-name": "nameserver_supermasters"
   },
   {
-    "model-name": "nameserver_comments",
+    "model-name": "SwitchportInformation",
+    "resource-file": "switchport_informations.json",
+    "table-name": "switchport_information"
+  },
+  {
+    "model-name": "Technician",
+    "resource-file": "technicians.json",
+    "table-name": "department_user"
+  },
+  {
+    "model-name": "Ticket",
+    "resource-file": "tickets.json",
+    "table-name": "tickets"
+  },
+  {
+    "model-name": "Tsigkey",
+    "resource-file": "tsigkeys.json",
+    "table-name": "nameserver_tsigkeys"
+  },
+  {
+    "model-name": "Vendor",
+    "resource-file": "vendors.json",
+    "table-name": "vendors"
+  },
+  {
+    "model-name": "NameserverComment",
     "resource-file": "nameserver_comments.json",
     "table-name": "nameserver_comments"
   },
   {
-    "model-name": "nameserver_cryptokeys",
-    "resource-file": "nameserver_cryptokeys.json",
-    "table-name": "nameserver_cryptokeys"
+    "model-name": "Comment",
+    "resource-file": "comments.json",
+    "table-name": "comments"
   },
   {
-    "model-name": "nameserver_tsigkeys",
-    "resource-file": "nameserver_tsigkeys.json",
-    "table-name": "nameserver_tsigkeys"
+    "model-name": "NameserverDomain",
+    "resource-file": "nameserver_domains.json",
+    "table-name": "nameserver_domains"
   },
   {
-    "model-name": "nameserver_domainmetadata",
-    "resource-file": "nameserver_domainmetadatas.json",
-    "table-name": "nameserver_domainmetadata"
+    "model-name": "Domain",
+    "resource-file": "domains.json",
+    "table-name": "domains"
+  },
+  {
+    "model-name": "TldExtension",
+    "resource-file": "tld_extensions.json",
+    "table-name": "tld_extensions"
+  },
+  {
+    "model-name": "WhiteGlove",
+    "resource-file": "white_gloves.json",
+    "table-name": "whitegloves"
+  },
+  {
+    "model-name": "product",
+    "resource-file": "products.json",
+    "table-name": "products"
+  },
+  {
+    "model-name": "coupon",
+    "resource-file": "coupons.json",
+    "table-name": "coupons"
   }
 ]

@@ -34,7 +34,7 @@ class MakeTreeOutput extends Command
     public function handle()
     {
         $this->info('Generating project files tree listing.');
-        exec('tree -f -I "bootstrap|bower|storage|docs|vendor|node_modules|*.md|_ide_helper.php|*.txt|*lock*" > tree.txt');
+        exec('tree -h -f -I "bootstrap|bower|storage|docs|vendor*|wiki|data|node_modules|*.md|_ide_helper.php|*.txt|*lock*" > tree.txt');
         $this->info('Project files tree listing generated.');
     }
 }

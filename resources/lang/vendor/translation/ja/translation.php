@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'search'                => '',
+    'add_language'          => '',
+    'language_name'         => '',
+    'locale'                => '',
+    'save'                  => '',
+    'languages'             => '',
+    'add'                   => '',
+    'add_translation'       => '',
+    'group_label'           => '',
+    'group_placeholder'     => '',
+    'key_label'             => '',
+    'key_placeholder'       => '',
+    'value_label'           => '',
+    'value_placeholder'     => '',
+    'advanced_options'      => '',
+    'namespace_label'       => '',
+    'namespace_placeholder' => '',
+    'translations'          => '',
+    'group_single'          => '',
+    'key'                   => '',
+    'single'                => '',
+];

@@ -2,17 +2,21 @@
 
 namespace App\Models\Support;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\BaseModel;
 
 /**
  * App\Models\Support\Note
  *
- * @property int $id
- * @property string $body
- * @property string $noteable_type
- * @property int $noteable_id
- * @property bool|\DateTime $created_at
- * @property bool|\DateTime $updated_at
+ * @property int                                                                             $id
+ * @property string                                                                          $body
+ * @property string                                                                          $noteable_type
+ * @property int                                                                             $noteable_id
+ * @property bool|\DateTime                                                                  $created_at
+ * @property bool|\DateTime                                                                  $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Note newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Note newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Note query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Note whereBody($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Note whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Note whereId($value)
@@ -21,22 +25,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Note whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class Note extends Model
+class Note extends BaseModel
 {
-
-    /**
-     * The database table used by the model.
-     *
-     * @var string
-     */
-    protected $table = 'notes';
-
-    /**
-     * The database primary key value.
-     *
-     * @var string
-     */
-    protected $primaryKey = 'id';
 
     /**
      * Attributes that should be mass-assignable.
@@ -50,23 +40,9 @@ class Note extends Model
     ];
 
     /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
-    protected $dates = [];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [];
-
-    /**
      * Get created_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */
@@ -78,7 +54,7 @@ class Note extends Model
     /**
      * Get updated_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */

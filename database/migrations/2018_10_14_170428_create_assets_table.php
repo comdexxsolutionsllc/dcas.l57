@@ -4,9 +4,6 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-/**
- * @todo
- */
 class CreateAssetsTable extends Migration
 {
 
@@ -23,8 +20,8 @@ class CreateAssetsTable extends Migration
             $table->string('hardware_id');
             $table->string('status');
             $table->integer('datacenter_id')->unsigned()->nullable();
-            $table->integer('switch_id')->unsigned()->nullable();
-            $table->string('switchport_id')->nullable();
+            $table->integer('network_device_id')->unsigned()->nullable();
+            $table->integer('switchport_id')->unsigned()->nullable();
             $table->text('network_interface_cards');
             $table->string('port_speed')->nullable();
             $table->ipAddress('private_ip')->nullable();
@@ -33,7 +30,7 @@ class CreateAssetsTable extends Migration
             $table->text('cpus');
             $table->text('memory');
             $table->text('disks');
-            $table->string('operating_system')->nullable();
+            $table->integer('operating_system_id')->unsigned()->nullable();
             $table->string('control_panel')->nullable();
             $table->string('administrator_password')->nullable();
             $table->integer('onhand_qty')->unsigned();

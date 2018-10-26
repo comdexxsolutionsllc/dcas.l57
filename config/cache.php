@@ -31,6 +31,9 @@ return [
     */
 
     'stores' => [
+        'array' => [
+            'driver' => 'array',
+        ],
 
         'database' => [
             'driver'     => 'database',

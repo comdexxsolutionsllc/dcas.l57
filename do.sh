@@ -1,2 +1,1 @@
-#!/usr/bin/env bash
-
+curl -s --user 'api:c4c7d2c71ab2b5c5666300a048a04eb7-2d27312c-2db677f0' https://api.mailgun.net/v3/parse.dcas.live/messages -F from='Excited User <theonlyalexrenner@icloud.com>' -F to=support@dcas.live -F subject='Hello' -F text='Testing some Mailgun awesomeness!'

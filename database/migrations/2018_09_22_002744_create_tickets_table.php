@@ -21,7 +21,8 @@ class CreateTicketsTable extends Migration
             $table->text('body');
             $table->integer('status_id')->unsigned();
             $table->integer('department_id')->unsigned();
-            $table->integer('user_id')->unsigned();
+            $table->integer('account_id')->unsigned();
+            $table->string('account_type');
             $table->integer('technician_assigned_id')->unsigned();
             $table->boolean('is_resolved')->default(false);
             $table->softDeletes();

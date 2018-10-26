@@ -13,8 +13,21 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('/version', function () {
+    $version = new PHLAK\SemVer\Version(\App\ApplicationVersion::API);
+
+    return $version;
+});
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
 Route::post('stripe/webhook', '\Laravel\Cashier\Http\Controllers\WebhookController@handleWebhook');
+
+
+Route::group(['prefix' => 'mailgun', 'middleware' => ['mailgun.webhook']],function () { Route::post('widgets', 'MailgunWidgetsController@store'); });
+
+Route::fallback(function () {
+    return response()->json(['message' => 'Not Found.'], 404);
+})->name('api.fallback.404');

@@ -141,7 +141,7 @@
         "name": "notifiable",
         "type": "belongsTo",
         "params": [
-          "App\\Models\\Notifiable",
+          "App\\Models\\GENERATED\\Notifiable",
           "notifiable_id"
         ],
         "field": "id"

@@ -2,19 +2,23 @@
 
 namespace App\Models\General;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\BaseModel;
 
 /**
  * App\Models\General\Notification
  *
- * @property string $id
- * @property string $type
- * @property string $notifiable_type
- * @property int $notifiable_id
- * @property string $data
- * @property bool|\DateTime $read_at
- * @property bool|\DateTime $created_at
- * @property bool|\DateTime $updated_at
+ * @property string                                                                          $id
+ * @property string                                                                          $type
+ * @property string                                                                          $notifiable_type
+ * @property int                                                                             $notifiable_id
+ * @property string                                                                          $data
+ * @property bool|\DateTime                                                                  $read_at
+ * @property bool|\DateTime                                                                  $created_at
+ * @property bool|\DateTime                                                                  $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Notification newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Notification newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Notification query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Notification whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Notification whereData($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Notification whereId($value)
@@ -25,26 +29,13 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Notification whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class Notification extends Model
+class Notification extends BaseModel
 {
 
+    /**
+     * @var bool
+     */
     public $incrementing = false;
-
-    /**
-     * The database table used by the model.
-     *
-     * @var string
-     */
-    protected $table = 'notifications';
-
-    /**
-     * The database primary key value.
-     *
-     * @var string
-     */
-    protected $primaryKey = 'id';
-
-    protected $keyType = 'string';
 
     /**
      * Attributes that should be mass-assignable.
@@ -60,25 +51,10 @@ class Notification extends Model
     ];
 
     /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
-    protected $dates = [];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [];
-
-    /**
      * Set the read_at.
      *
-     * @param  string $value
+     * @param string $value
      *
-     * @return void
      */
     public function setReadAtAttribute($value)
     {
@@ -88,7 +64,7 @@ class Notification extends Model
     /**
      * Get read_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */
@@ -100,7 +76,7 @@ class Notification extends Model
     /**
      * Get created_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */
@@ -112,7 +88,7 @@ class Notification extends Model
     /**
      * Get updated_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */

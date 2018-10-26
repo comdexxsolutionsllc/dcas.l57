@@ -2,17 +2,21 @@
 
 namespace App\Models\Nameserver;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\BaseModel;
 
 /**
  * App\Models\Nameserver\Tsigkey
  *
- * @property int $id
- * @property string $name
- * @property string $algorithm
- * @property string $secret
- * @property array $created_at
- * @property array $updated_at
+ * @property int                                                                             $id
+ * @property string                                                                          $name
+ * @property string                                                                          $algorithm
+ * @property string                                                                          $secret
+ * @property array                                                                           $created_at
+ * @property array                                                                           $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Tsigkey newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Tsigkey newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Tsigkey query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Tsigkey whereAlgorithm($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Tsigkey whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Tsigkey whereId($value)
@@ -21,7 +25,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Tsigkey whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class Tsigkey extends Model
+class Tsigkey extends BaseModel
 {
 
     /**
@@ -45,7 +49,7 @@ class Tsigkey extends Model
     /**
      * Get created_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return array
      */
@@ -57,12 +61,36 @@ class Tsigkey extends Model
     /**
      * Get updated_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return array
      */
     public function getUpdatedAtAttribute($value)
     {
         return \DateTime::createFromFormat('j/n/Y g:i A', $value);
+    }
+
+    /**
+     * Get the index name for the model.
+     *
+     * @return string
+     */
+    public function searchableAs(): string
+    {
+        return 'nameserver_tsigkey_index';
+    }
+
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array
+     */
+    public function toSearchableArray(): array
+    {
+        $array = $this->toArray();
+
+        // Customize array...
+
+        return $array;
     }
 }

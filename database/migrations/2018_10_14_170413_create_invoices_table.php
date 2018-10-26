@@ -16,7 +16,8 @@ class CreateInvoicesTable extends Migration
     {
         Schema::create('invoices', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('customer_id')->unsigned();
+            $table->integer('account_id')->unsigned();
+            $table->string('account_type');
             $table->string('subtotal');
             $table->enum('payment_option', [
                 'check',
@@ -35,7 +36,7 @@ class CreateInvoicesTable extends Migration
             $table->timestamp('date_paid')->nullable();
             $table->timestamps();
 
-            $table->index('customer_id');
+            $table->index('account_id');
         });
     }
 

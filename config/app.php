@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -109,6 +108,19 @@ return [
     'cipher' => 'AES-256-CBC',
 
     /*
+    |-------------------------------------------
+    | API Version
+    |-------------------------------------------
+    |
+    | This value is the version of your api.
+    | It's used when there's no specified
+    | version on the routes, so it will take this
+    | as the default, or current.
+     */
+
+    'api_latest' => '1',
+
+    /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
@@ -120,7 +132,6 @@ return [
     */
 
     'providers' => [
-
         /*
          * Laravel Framework Service Providers...
          */
@@ -152,6 +163,8 @@ return [
          */
         ComdexxSolutionsLLC\MySQLScout\Providers\MySQLScoutServiceProvider::class,
         App\Providers\TransformerServiceProvider::class,
+        App\Providers\MenuServiceProvider::class,
+        App\Providers\MailboxServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -165,7 +178,6 @@ return [
 
         Folklore\GraphQL\ServiceProvider::class,
         ijeffro\Airports\AirportsServiceProvider::class,
-
     ],
 
     /*
@@ -180,7 +192,6 @@ return [
     */
 
     'aliases' => [
-
         'Airports'       => ijeffro\Airports\AirportsFacade::class,
         'App'            => Illuminate\Support\Facades\App::class,
         'Artisan'        => Illuminate\Support\Facades\Artisan::class,
@@ -218,7 +229,5 @@ return [
         'URL'            => Illuminate\Support\Facades\URL::class,
         'Validator'      => Illuminate\Support\Facades\Validator::class,
         'View'           => Illuminate\Support\Facades\View::class,
-
     ],
-
 ];

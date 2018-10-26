@@ -58,20 +58,20 @@ class UserQuery extends Query
     {
         if (isset($args['id'])) {
             return User::where('id', $args['id'])->get();
-        } else {
-            if (isset($args['name'])) {
-                return User::whereName($args['name'])->get();
-            } elseif (isset($args['username'])) {
-                return User::whereUsername($args['username'])->get();
-            } elseif (isset($args['email'])) {
-                return User::whereEmail($args['email'])->get();
-            } elseif (isset($args['email_verified_at'])) {
-                return User::whereEmailVerifiedAt($args['email_verified_at'])->get();
-            } elseif (isset($args['trial_ends_at'])) {
-                return User::whereTrialEndsAt($args['trial_ends_at'])->get();
-            } else {
-                return User::all();
-            }
         }
+
+        if (isset($args['name'])) {
+            return User::whereName($args['name'])->get();
+        } elseif (isset($args['username'])) {
+            return User::whereUsername($args['username'])->get();
+        } elseif (isset($args['email'])) {
+            return User::whereEmail($args['email'])->get();
+        } elseif (isset($args['email_verified_at'])) {
+            return User::whereEmailVerifiedAt($args['email_verified_at'])->get();
+        } elseif (isset($args['trial_ends_at'])) {
+            return User::whereTrialEndsAt($args['trial_ends_at'])->get();
+        }
+
+        return User::all();
     }
 }

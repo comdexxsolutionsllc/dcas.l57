@@ -17,6 +17,7 @@ class CreateDomainsTable extends Migration
         Schema::create('domains', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('account_id')->unsigned();
+            $table->string('account_type');
             $table->integer('registrar_id')->unsigned();
             $table->string('domain_name');
             $table->boolean('active')->default(true);

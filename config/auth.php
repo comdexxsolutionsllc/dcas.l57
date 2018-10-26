@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
@@ -94,7 +93,7 @@ return [
         ],
         'whitegloves' => [
             'driver' => 'eloquent',
-            'model'  => App\Models\Roles\WhiteGlove::class,
+            'model'  => App\Models\Roles\Whiteglove::class,
         ],
     ],
 
@@ -135,5 +134,4 @@ return [
             'expire'   => 0,
         ],
     ],
-
 ];

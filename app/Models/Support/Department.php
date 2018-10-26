@@ -2,19 +2,25 @@
 
 namespace App\Models\Support;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\BaseModel;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * App\Models\Support\Department
  *
- * @property int $id
- * @property string $name
- * @property string|null $description
- * @property string $hexcode
- * @property int $visible
- * @property bool|\DateTime $deleted_at
- * @property bool|\DateTime $created_at
- * @property bool|\DateTime $updated_at
+ * @property int                                                                             $id
+ * @property string                                                                          $name
+ * @property string|null                                                                     $description
+ * @property string                                                                          $hexcode
+ * @property int                                                                             $visible
+ * @property bool|\DateTime                                                                  $deleted_at
+ * @property bool|\DateTime                                                                  $created_at
+ * @property bool|\DateTime                                                                  $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Support\Ticket[]      $tickets
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Department newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Department newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Department query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Department whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Department whereDeletedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Department whereDescription($value)
@@ -25,22 +31,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Department whereVisible($value)
  * @mixin \Eloquent
  */
-class Department extends Model
+class Department extends BaseModel
 {
-
-    /**
-     * The database table used by the model.
-     *
-     * @var string
-     */
-    protected $table = 'departments';
-
-    /**
-     * The database primary key value.
-     *
-     * @var string
-     */
-    protected $primaryKey = 'id';
 
     /**
      * Attributes that should be mass-assignable.
@@ -55,23 +47,9 @@ class Department extends Model
     ];
 
     /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
-    protected $dates = [];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [];
-
-    /**
      * Get deleted_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */
@@ -83,7 +61,7 @@ class Department extends Model
     /**
      * Get created_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */
@@ -95,7 +73,7 @@ class Department extends Model
     /**
      * Get updated_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */
@@ -126,5 +104,13 @@ class Department extends Model
         // Customize array...
 
         return $array;
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function tickets(): HasMany
+    {
+        return $this->hasMany(Ticket::class);
     }
 }

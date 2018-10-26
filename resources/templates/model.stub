@@ -1,0 +1,31 @@
+<?php
+
+namespace $NAMESPACE_MODEL$;
+
+use Illuminate\Database\Eloquent\Model;
+use Dimsav\Translatable\Translatable;
+
+class $MODEL_NAME$ extends Model
+{
+    use Translatable;
+    public $translationModel = '$MODEL_NAME$Translation';
+
+    public $fillable = [
+        // TODO: Write down fillables
+    ];
+
+    public $hidden = [
+            // TODO: Write down hidden
+        ];
+
+    public $translatedAttributes = [
+        // TODO: Write down translatable values
+    ];
+
+    public function getRules($id = null): array
+    {
+       return [
+        //TODO write down rules
+       ];
+    }
+}

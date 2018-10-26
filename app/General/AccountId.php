@@ -10,21 +10,25 @@ namespace App\General;
 class AccountId
 {
 
-    const LOWER_BOUNDS = 4;
+    protected const LOWER_BOUNDS = 4;
 
     /**
+     * Account Types.
+     *
      * @var array
      */
-    static $accountTypes = [
+    protected static $accountTypes = [
         'C',
         'V',
         'WG',
     ];
 
     /**
+     * Account Type Default.
+     *
      * @var string
      */
-    static $accountTypeDefault = 'C';
+    protected static $accountTypeDefault = 'C';
 
     /**
      * Generate an account number.

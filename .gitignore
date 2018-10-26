@@ -14,3 +14,4 @@ yarn-error.log
 .phpunit.result.cache
 /public/phpcs.xml
 /public/phpmd.html
+notes.txt

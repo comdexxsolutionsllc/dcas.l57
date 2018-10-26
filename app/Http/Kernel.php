@@ -22,6 +22,7 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\TrustProxies::class,
         \Barryvdh\Cors\HandleCors::class,
         \Softonic\Laravel\Middleware\RequestId::class,
+        \App\Http\Middleware\LogRequestsWithXRequestId::class,
         \App\Http\Middleware\RobotMiddleware::class,
     ];
 
@@ -38,6 +39,9 @@ class Kernel extends HttpKernel
             \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
+
+            // \App\Http\Middleware\MustBeActive::class,
+
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
         ],
@@ -56,20 +60,28 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
+        'api.version'    => \App\Http\Middleware\APIversion::class,
         'auth'           => \App\Http\Middleware\Authenticate::class,
         'auth.basic'     => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings'       => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'cache.headers'  => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'can'            => \Illuminate\Auth\Middleware\Authorize::class,
+        'customer'       => \App\Http\Middleware\Customer::class,
         'guest'          => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        'internal'       => \App\Http\Middleware\Internal::class,
+        'local'          => \App\Http\Middleware\Local::class,
+        'permission'     => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
+        'role'           => \Spatie\Permission\Middlewares\RoleMiddleware::class,
+        'scope'          => \Laravel\Passport\Http\Middleware\CheckForAnyScope::class,
+        'scopes'         => \Laravel\Passport\Http\Middleware\CheckScopes::class,
+        'secure.content' => \Stevenmaguire\Laravel\Http\Middleware\EnforceContentSecurity::class,
         'signed'         => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle'       => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'vendor'         => \App\Http\Middleware\Vendor::class,
         'verified'       => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'scopes'         => \Laravel\Passport\Http\Middleware\CheckScopes::class,
-        'scope'          => \Laravel\Passport\Http\Middleware\CheckForAnyScope::class,
-        'secure.content' => \Stevenmaguire\Laravel\Http\Middleware\EnforceContentSecurity::class,
-        'role'           => \Spatie\Permission\Middlewares\RoleMiddleware::class,
-        'permission'     => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
+        'whitegloves'    => \App\Http\Middleware\WhiteGlove::class,
+
+	'mailgun.webhook' => \App\Http\Middleware\ValidateMailgunWebhook::class,
     ];
 
     /**

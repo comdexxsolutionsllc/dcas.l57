@@ -2,23 +2,27 @@
 
 namespace App\Models\General;
 
+use App\Models\BaseModel;
 use App\Models\Roles\Customer;
-use Illuminate\Database\Eloquent\Model;
 
 /**
  * App\Models\General\Subscription
  *
- * @property int $id
- * @property int $user_id
- * @property string $name
- * @property string $stripe_id
- * @property string $stripe_plan
- * @property int $quantity
- * @property bool|\DateTime $trial_ends_at
- * @property bool|\DateTime $ends_at
- * @property bool|\DateTime $created_at
- * @property bool|\DateTime $updated_at
- * @property-read \App\Models\Roles\Customer $user
+ * @property int                                                                             $id
+ * @property int                                                                             $user_id
+ * @property string                                                                          $name
+ * @property string                                                                          $stripe_id
+ * @property string                                                                          $stripe_plan
+ * @property int                                                                             $quantity
+ * @property bool|\DateTime                                                                  $trial_ends_at
+ * @property bool|\DateTime                                                                  $ends_at
+ * @property bool|\DateTime                                                                  $created_at
+ * @property bool|\DateTime                                                                  $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property-read \App\Models\Roles\Customer                                                 $user
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Subscription newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Subscription newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Subscription query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Subscription whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Subscription whereEndsAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Subscription whereId($value)
@@ -31,22 +35,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Subscription whereUserId($value)
  * @mixin \Eloquent
  */
-class Subscription extends Model
+class Subscription extends BaseModel
 {
-
-    /**
-     * The database table used by the model.
-     *
-     * @var string
-     */
-    protected $table = 'subscriptions';
-
-    /**
-     * The database primary key value.
-     *
-     * @var string
-     */
-    protected $primaryKey = 'id';
 
     /**
      * Attributes that should be mass-assignable.
@@ -64,20 +54,6 @@ class Subscription extends Model
     ];
 
     /**
-     * The attributes that should be mutated to dates.
-     *
-     * @var array
-     */
-    protected $dates = [];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
-    protected $casts = [];
-
-    /**
      * Get the user for this model.
      */
     public function user()
@@ -88,9 +64,8 @@ class Subscription extends Model
     /**
      * Set the trial_ends_at.
      *
-     * @param  string $value
+     * @param string $value
      *
-     * @return void
      */
     public function setTrialEndsAtAttribute($value)
     {
@@ -100,9 +75,8 @@ class Subscription extends Model
     /**
      * Set the ends_at.
      *
-     * @param  string $value
+     * @param string $value
      *
-     * @return void
      */
     public function setEndsAtAttribute($value)
     {
@@ -112,7 +86,7 @@ class Subscription extends Model
     /**
      * Get trial_ends_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */
@@ -124,7 +98,7 @@ class Subscription extends Model
     /**
      * Get ends_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */
@@ -136,7 +110,7 @@ class Subscription extends Model
     /**
      * Get created_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */
@@ -148,7 +122,7 @@ class Subscription extends Model
     /**
      * Get updated_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return bool|\DateTime
      */
