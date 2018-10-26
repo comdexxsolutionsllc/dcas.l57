@@ -10,7 +10,7 @@ namespace App\General;
 class HardwareId
 {
 
-    const LOWER_BOUNDS = 4;
+    protected const LOWER_BOUNDS = 4;
 
     /**
      * Generate a hardware identification number.

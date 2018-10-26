@@ -21,6 +21,8 @@ class CreateNetworkConfigurationsTable extends Migration
     {
         Schema::create('network_configurations', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('switchport_information_id')->unsigned();
+            $table->longText('configuration');
             $table->timestamps();
         });
     }

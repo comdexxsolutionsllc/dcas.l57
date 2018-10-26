@@ -4,11 +4,6 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-/**
- * Class CreateNetworkDevicesTable
- *
- * @todo
- */
 class CreateNetworkDevicesTable extends Migration
 {
 
@@ -21,6 +16,16 @@ class CreateNetworkDevicesTable extends Migration
     {
         Schema::create('network_devices', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('asset_number');
+            $table->string('serial_number')->nullable();
+            $table->integer('network_device_type_id')->unsigned();
+            $table->string('hostname');
+            $table->ipAddress('ip_address');
+            $table->ipAddress('ip_address_alt')->nullable();
+            $table->string('hardware_maker');
+            $table->string('hardware_version');
+            $table->string('device_os_version');
+            $table->integer('total_ports')->unsigned();
             $table->timestamps();
         });
     }

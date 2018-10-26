@@ -137,7 +137,7 @@
         "name": "commentable",
         "type": "belongsTo",
         "params": [
-          "App\\Models\\Commentable",
+          "App\\Models\\GENERATED\\Commentable",
           "commentable_id"
         ],
         "field": "id"

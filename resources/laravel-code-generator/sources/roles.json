@@ -180,17 +180,17 @@
       "name": "modelHasRole",
       "type": "hasOne",
       "params": [
-        "App\\Models\\ModelHasRole",
+        "App\\Models\\GENERATED\\ModelHasRole",
         "role_id",
         "id"
       ],
       "field": "id"
     },
     {
-      "name": "roleHasPermission",
-      "type": "hasOne",
+      "name": "roleHasPermissions",
+      "type": "hasMany",
       "params": [
-        "App\\Models\\RoleHasPermission",
+        "App\\Models\\GENERATED\\RoleHasPermission",
         "role_id",
         "id"
       ],

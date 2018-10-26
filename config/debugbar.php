@@ -8,12 +8,12 @@ return [
      |
      | Debugbar is enabled by default, when debug is set to true in app.php.
      | You can override the value by setting enable to true or false instead of null.
-     | 
+     |
      | You can provide an array of URI's that must be ignored (eg. 'api/*')
      |
      */
 
-    'enabled' => env('DEBUGBAR_ENABLED', null),
+    'enabled' => env('DEBUGBAR_ENABLED', false),
     'except'  => [],
 
     /*
@@ -113,12 +113,12 @@ return [
         'symfony_request' => true,  // Only one can be enabled..
         'mail'            => true,  // Catch mail messages
         'laravel'         => false, // Laravel version and environment
-        'events'          => false, // All events fired
+        'events'          => true, // All events fired
         'default_request' => false, // Regular or special Symfony request logger
-        'logs'            => false, // Add the latest log messages
-        'files'           => false, // Show the included files
-        'config'          => false, // Display config settings
-        'cache'           => false, // Display cache events
+        'logs'            => true, // Add the latest log messages
+        'files'           => true, // Show the included files
+        'config'          => true, // Display config settings
+        'cache'           => true, // Display cache events
     ],
 
     /*

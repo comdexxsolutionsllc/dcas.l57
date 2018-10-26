@@ -10,9 +10,9 @@ class RedirectIfAuthenticated
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \Closure                 $next
-     * @param  string|null              $guard
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure                 $next
+     * @param string|null              $guard
      *
      * @return mixed
      */
@@ -21,22 +21,22 @@ class RedirectIfAuthenticated
         switch ($guard) {
             case 'customer':
                 if (\Auth::guard($guard)->check()) {
-                    return redirect()->route('home');
+                    return redirect()->route('home.customer');
                 }
                 break;
             case 'employee':
                 if (\Auth::guard($guard)->check()) {
-                    return redirect()->route('employee.home');
+                    return redirect()->route('home.employee');
                 }
                 break;
             case 'vendor':
                 if (\Auth::guard($guard)->check()) {
-                    return redirect()->route('vendor.home');
+                    return redirect()->route('home.vendor');
                 }
                 break;
             case 'whitegloves':
                 if (\Auth::guard($guard)->check()) {
-                    return redirect()->route('whitegloves.home');
+                    return redirect()->route('home.whitegloves');
                 }
                 break;
             default:

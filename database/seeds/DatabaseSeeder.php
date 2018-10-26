@@ -71,7 +71,7 @@ class DatabaseSeeder extends Seeder
         factory(App\Models\Roles\Vendor::class, 50)->create();
 
         $this->logAndOutput('Seeding test whitegloves customers');
-        factory(App\Models\Roles\WhiteGlove::class, 50)->create();
+        factory(App\Models\Roles\Whiteglove::class, 50)->create();
 
         $this->logAndOutput('Seeding roles');
         $this->call(RoleTableSeeder::class);
@@ -98,7 +98,7 @@ class DatabaseSeeder extends Seeder
         $this->call(StatusTableSeeder::class);
 
         $this->logAndOutput('Seeding Tickets');
-        factory(App\Models\Support\Ticket::class, 500)->create();
+        factory(App\Models\Support\Ticket::class, 75)->create();
 
         $this->logAndOutput('Seeding persons for AboutUs page');
         factory(App\Models\Website\AboutUs::class, 19)->create();
@@ -108,12 +108,6 @@ class DatabaseSeeder extends Seeder
 
         $this->logAndOutput('Seeding Notes');
         factory(App\Models\Support\Note::class, 354)->create();
-
-        $this->logAndOutput('Seeding Menus');
-        factory(App\Models\Website\Menu::class, 15)->create();
-
-        $this->logAndOutput('Seeding SubMenus');
-        factory(App\Models\Website\SubMenu::class, 25)->create();
 
         $this->logAndOutput('Seeding Airports');
         $this->call(AirportTableSeeder::class);

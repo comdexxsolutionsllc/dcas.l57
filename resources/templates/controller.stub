@@ -1,0 +1,20 @@
+<?php
+
+namespace $NAMESPACE_CONTROLLER$;
+
+use $NAMESPACE_REPOSITORY$\$MODEL_NAME$Repository;
+use Illuminate\Http\Request;
+use Swis\JsonApi\Server\Http\Controllers\Api\BaseApiController;
+use Swis\JsonApi\Server\Repositories\RepositoryInterface;
+
+class $MODEL_NAME$Controller extends BaseApiController
+{
+    /** @var RepositoryInterface $repository */
+    protected $repository;
+
+    public function __construct($MODEL_NAME$Repository $repository, Request $request)
+    {
+        $this->repository = $repository;
+        parent::__construct($this->repository, $request);
+    }
+}

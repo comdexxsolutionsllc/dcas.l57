@@ -4,7 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\Roles\RoleCollection;
+use Illuminate\Contracts\Auth\StatefulGuard;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 /**
  * Class LoginController
@@ -35,7 +39,6 @@ class LoginController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @return void
      */
     public function __construct()
     {
@@ -44,6 +47,9 @@ class LoginController extends Controller
         $this->roles = new RoleCollection;
     }
 
+    /**
+     * Set Guest Middleware.
+     */
     protected function setGuestMiddleware(): void
     {
         ($this->guard() === 'customer') ? $this->middleware('guest')->except('logout') : $this->middleware('guest:' . $this->role())->except('logout');
@@ -54,7 +60,7 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Contracts\Auth\StatefulGuard
      */
-    public function guard()
+    public function guard(): StatefulGuard
     {
         return \Auth::guard($this->role());
     }
@@ -68,7 +74,27 @@ class LoginController extends Controller
 
         $role = $matches['role'] ?? RoleCollection::default();
 
+        // cache()->put('guard', $role);
+
         return $role;
+    }
+
+    /**
+     * Log the user out of the application.
+     *
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     *
+     * @throws \Exception
+     */
+    public function logout(Request $request): RedirectResponse
+    {
+        $this->guard()->logout();
+
+        $request->session()->invalidate();
+
+        return redirect(cache()->get('redirect_back')) ?? redirect('/login');
     }
 
     /**
@@ -76,13 +102,17 @@ class LoginController extends Controller
      *
      * @param null $role
      *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|\Illuminate\View\View
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     *
+     * @throws \Exception
      */
-    public function showLoginForm($role = null)
+    public function showLoginForm($role = null): View
     {
-        $post_url = $this->posturl($role);
+        cache()->put('redirect_back', url()->current(), 60);
 
-        return view('auth.login', compact('post_url'));
+        $postUrl = $this->posturl($role);
+
+        return view('auth.login', compact('postUrl'));
     }
 
     /**
@@ -102,18 +132,18 @@ class LoginController extends Controller
      */
     public function redirectTo(): string
     {
-        switch ($role = $this->role()) {
+        switch ($this->role()) {
             case 'customer':
-                return route('home');
+                return route('home.customer');
                 break;
             case 'employee':
-                return route('employee.home');
+                return route('home.employee');
                 break;
             case 'vendor':
-                return route('vendor.home');
+                return route('home.vendor');
                 break;
             case 'whitegloves':
-                return route('whitegloves.home');
+                return route('home.whitegloves');
                 break;
             default:
                 break;

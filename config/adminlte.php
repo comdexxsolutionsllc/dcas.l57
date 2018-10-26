@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Title
@@ -30,9 +29,9 @@ return [
     |
     */
 
-    'logo' => '<b>Datacenter Automation</b> Suite',
+    'logo' => '<b>Datacenter</b>Automation',
 
-    'logo_mini' => '<b>DCAS</b> Suite',
+    'logo_mini' => '<b>D</b>CAS',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,11 +107,11 @@ return [
     */
 
     /**
-     * Bypassing config based menu and using my own menu via the database.
+     * Bypassing config based menu and using a MenuServiceProvider.
      *
      * @author Alex Renner <alex@elemeentalfusion.online>
      */
-    'menu'         => \App\General\MenuBuilder::factory(),
+    'menu'         => [],
 
     /*
     |--------------------------------------------------------------------------

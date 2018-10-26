@@ -35,8 +35,6 @@ return [
         'default'   => 'ALPHA',
         'published' => [
             'ALPHA',
-            //'BETA',
-            //'1.0.0',
         ],
     ],
 

@@ -1,6 +1,6 @@
 <?php
 
-use App\TldExtension;
+use App\Models\Support\TldExtension;
 use Illuminate\Database\Seeder;
 
 class TldExtensionTableSeeder extends Seeder

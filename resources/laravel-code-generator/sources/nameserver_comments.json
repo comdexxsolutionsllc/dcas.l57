@@ -67,7 +67,7 @@
         "name": "domain",
         "type": "belongsTo",
         "params": [
-          "App\\Models\\Domain",
+          "App\\Models\\GENERATED\\Domain",
           "domain_id"
         ],
         "field": "id"

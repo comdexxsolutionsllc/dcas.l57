@@ -46,7 +46,7 @@ $factory->define(App\Models\Roles\Vendor::class, function (Faker $faker) {
     ];
 });
 
-$factory->define(App\Models\Roles\WhiteGlove::class, function (Faker $faker) {
+$factory->define(App\Models\Roles\Whiteglove::class, function (Faker $faker) {
     return [
         'name'              => $faker->name,
         'account_id'        => \App\General\AccountId::generate('WG'),

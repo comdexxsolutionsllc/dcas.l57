@@ -19,27 +19,30 @@ import VueLazyload from 'vue-lazyload';
 import VueMoment from 'vue-moment';
 import VueProgressBar from 'vue-progressbar';
 
+import Login from './components/Login.vue';
+import store from './store.js';
+
 Vue.use(Multiselect);
 Vue.use(Notifications);
 Vue.use(PortalVue);
-Vue.use(VModal);
+Vue.use(VModal, {dialog: true});
 Vue.use(VueI18n);
 Vue.use(VueLazyload);
 Vue.use(VueMoment);
 Vue.use(VueProgressBar,
-    {
-        color: '#bffaf3',
-        failedColor: '#874b4b',
-        thickness: '5px',
-        transition: {
-            speed: '0.2s',
-            opacity: '0.6s',
-            termination: 300
-        },
-        autoRevert: true,
-        location: 'left',
-        inverse: false
-    }
+  {
+    color: '#bffaf3',
+    failedColor: '#874b4b',
+    thickness: '5px',
+    transition: {
+      speed: '0.2s',
+      opacity: '0.6s',
+      termination: 300
+    },
+    autoRevert: true,
+    location: 'left',
+    inverse: false
+  }
 );
 
 /**
@@ -49,25 +52,34 @@ Vue.use(VueProgressBar,
  */
 
 Vue.component(
-    'passport-clients',
-    require('./components/passport/Clients.vue')
+  'passport-clients',
+  require('./components/passport/Clients.vue').default
 );
 
 Vue.component(
-    'passport-authorized-clients',
-    require('./components/passport/AuthorizedClients.vue')
+  'passport-authorized-clients',
+  require('./components/passport/AuthorizedClients.vue').default
 );
 
 Vue.component(
-    'passport-personal-access-tokens',
-    require('./components/passport/PersonalAccessTokens.vue')
+  'passport-personal-access-tokens',
+  require('./components/passport/PersonalAccessTokens.vue').default
 );
 
 Vue.component(
-    'tiptap-editor',
-    require('./components/TiptapEditor.vue')
+  'tiptap-editor',
+  require('./components/TiptapEditor.vue').default
+);
+
+Vue.component(
+  'cart',
+  require('./components/Cart.vue').default
 );
 
 const app = new Vue({
-    el: '#app'
+  el: '#app',
+  store,
+  components: {
+    Login
+  }
 });

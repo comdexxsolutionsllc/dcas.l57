@@ -4,14 +4,16 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Models\Support\Note::class, function (Faker $faker) {
     $types = $faker->randomElement([
-        App\Models\Support\Technician::class,
-        App\Models\Support\Ticket::class,
-        App\Models\Roles\Customer::class,
+        (new App\Models\Roles\Customer),
+        (new App\Models\Support\Ticket),
     ]);
 
     return [
         'body'          => $faker->paragraph,
-        'noteable_id'   => $faker->randomElement($types::pluck('id')->toArray()),
-        'noteable_type' => $types,
+        'noteable_id'   => function () use ($faker, $types) {
+            //  $faker->randomElement(App\Models\Support\Technician::pluck('employee_id')->toArray()) ||
+            return $faker->randomElement($types::pluck('id')->toArray());
+        },
+        'noteable_type' => get_class($types),
     ];
 });

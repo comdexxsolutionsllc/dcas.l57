@@ -4,7 +4,6 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Default Log Channel
@@ -52,6 +51,13 @@ return [
             'days'   => 7,
         ],
 
+        'x-request-id' => [
+            'driver' => 'daily',
+            'path'   => storage_path('logs/debug--x-request-id.log'),
+            'level'  => 'debug',
+            'days'   => 7,
+        ],
+
         'slack' => [
             'driver'   => 'slack',
             'url'      => env('LOG_SLACK_WEBHOOK_URL'),
@@ -88,5 +94,4 @@ return [
             'level'  => 'debug',
         ],
     ],
-
 ];

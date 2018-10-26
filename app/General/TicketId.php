@@ -10,7 +10,7 @@ namespace App\General;
 class TicketId
 {
 
-    const LOWER_BOUNDS = 3;
+    protected const LOWER_BOUNDS = 3;
 
     /**
      * Generate a ticket identification number.

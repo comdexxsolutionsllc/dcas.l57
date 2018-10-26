@@ -36,4 +36,28 @@ return [
 |
  */
 
+    'irregular_plurals' => [
+        'software'    => 'software',
+        'information' => 'information',
+        'info'        => 'info',
+    ],
+
+    'organize_migrations' => true,
+
+    'plural_names_for' => [
+        'controller-name'    => false,
+        'request-form-name'  => false,
+        'route-group'        => true,
+        'language-file-name' => true,
+        'resource-file-name' => true,
+        'table-name'         => true,
+    ],
+
+    'controllers_path' => 'Http/Controllers/GENERATED',
+
+    'form_requests_path' => 'Http/Requests/GENERATED',
+
+    'languages_path' => 'resources/lang/GENERATED',
+
+    'models_path' => 'Models/GENERATED',
 ];

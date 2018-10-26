@@ -139,7 +139,7 @@
         "name": "noteable",
         "type": "belongsTo",
         "params": [
-          "App\\Models\\Noteable",
+          "App\\Models\\GENERATED\\Noteable",
           "noteable_id"
         ],
         "field": "id"

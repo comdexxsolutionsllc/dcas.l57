@@ -35,14 +35,6 @@ class RoleCollection extends Collection
     }
 
     /**
-     * @return \App\Models\Roles\RoleCollection
-     */
-    public static function factory()
-    {
-        return new RoleCollection;
-    }
-
-    /**
      * @return string
      */
     public static function default()
@@ -51,22 +43,10 @@ class RoleCollection extends Collection
     }
 
     /**
-     * Get the keys of the collection items.
-     *
-     * @return array|\Illuminate\Support\Collection
+     * @return \App\Models\Roles\RoleCollection
      */
-    public function keys()
+    public static function factory()
     {
-        return array_keys(self::all());
-    }
-
-    /**
-     * Reset the keys on the underlying array.
-     *
-     * @return array|\Illuminate\Support\Collection
-     */
-    public function values()
-    {
-        return array_values(self::all());
+        return new RoleCollection;
     }
 }

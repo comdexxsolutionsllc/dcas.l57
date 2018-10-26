@@ -1,34 +1,35 @@
 <!--- Provide a general summary of your changes in the Title above -->
 
-## Description
-
+#### DESCRIPTION
 Describe your changes in detail.
 
-## Motivation and context
+#### RELATED ISSUE
+<!--- This project only accepts pull requests related to open issues -->
+<!--- If suggesting a new feature or change, please discuss it in an issue first -->
+<!--- If fixing a bug, there should be an issue describing it with steps to reproduce -->
+<!--- Please link to the issue here: -->
 
+#### MOTIVATION AND CONTEXT
 Why is this change required? What problem does it solve?
 
 If it fixes an open issue, please link to the issue here (if you write `fixes #num`
 or `closes #num`, the issue will be automatically closed when the pull is accepted.)
 
-## How has this been tested?
-
+#### HOW HAS THIS BEEN TESTED?
 Please describe in detail how you tested your changes.
 
 Include details of your testing environment, and the tests you ran to
 see how your change affects other areas of the code, etc.
 
-## Screenshots (if appropriate)
+#### SCREENSHOTS (IF APPROPRIATE)
 
-## Types of changes
-
+#### TYPES OF CHANGES
 What types of changes does your code introduce? Put an `x` in all the boxes that apply:
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Breaking change (fix or feature that would cause existing functionality to change)
 
-## Checklist:
-
+#### CHECKLIST
 Go over all the following points, and put an `x` in all the boxes that apply.
 
 Please, please, please, don't send your pull request until all of the boxes are ticked. Once your pull request is created, it will trigger a build on our [continuous integration](http://www.phptherightway.com/#continuous-integration) server to make sure your [tests and code style pass](https://help.github.com/articles/about-required-status-checks/).

@@ -15,7 +15,6 @@ class HomeController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @return void
      */
     public function __construct()
     {
@@ -32,7 +31,7 @@ class HomeController extends Controller
      */
     public function index(): View
     {
-        return view('home');
+        return view('home.customer');
     }
 
     /**
@@ -42,7 +41,7 @@ class HomeController extends Controller
      */
     public function employeeIndex(): View
     {
-        return view('home-employee');
+        return view('home.employee');
     }
 
     /**
@@ -52,7 +51,7 @@ class HomeController extends Controller
      */
     public function vendorIndex(): View
     {
-        return view('home-vendor');
+        return view('home.vendor');
     }
 
     /**
@@ -62,6 +61,6 @@ class HomeController extends Controller
      */
     public function whiteglovesIndex(): View
     {
-        return view('home-whitegloves');
+        return view('home.whitegloves');
     }
 }

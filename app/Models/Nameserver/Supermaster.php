@@ -2,17 +2,21 @@
 
 namespace App\Models\Nameserver;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\BaseModel;
 
 /**
  * App\Models\Nameserver\Supermaster
  *
- * @property int $id
- * @property string $ip
- * @property string $nameserver
- * @property string $account
- * @property array $created_at
- * @property array $updated_at
+ * @property int                                                                             $id
+ * @property string                                                                          $ip
+ * @property string                                                                          $nameserver
+ * @property string                                                                          $account
+ * @property array                                                                           $created_at
+ * @property array                                                                           $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Supermaster newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Supermaster newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Supermaster query()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Supermaster whereAccount($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Supermaster whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Supermaster whereId($value)
@@ -21,7 +25,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Supermaster whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class Supermaster extends Model
+class Supermaster extends BaseModel
 {
 
     /**
@@ -45,7 +49,7 @@ class Supermaster extends Model
     /**
      * Get created_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return array
      */
@@ -57,12 +61,36 @@ class Supermaster extends Model
     /**
      * Get updated_at in array format
      *
-     * @param  string $value
+     * @param string $value
      *
      * @return array
      */
     public function getUpdatedAtAttribute($value)
     {
         return \DateTime::createFromFormat('j/n/Y g:i A', $value);
+    }
+
+    /**
+     * Get the index name for the model.
+     *
+     * @return string
+     */
+    public function searchableAs(): string
+    {
+        return 'nameserver_supermaster_index';
+    }
+
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array
+     */
+    public function toSearchableArray(): array
+    {
+        $array = $this->toArray();
+
+        // Customize array...
+
+        return $array;
     }
 }
