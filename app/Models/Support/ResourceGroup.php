@@ -7,13 +7,12 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\ResourceGroup
  *
- * @property int                                                                             $id
- * @property string                                                                          $serial_number
- * @property mixed                                                                           $service_ids
- * @property string|null                                                                     $notes
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $serial_number
+ * @property mixed                           $service_ids
+ * @property string|null                     $notes
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\ResourceGroup newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\ResourceGroup newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\ResourceGroup query()

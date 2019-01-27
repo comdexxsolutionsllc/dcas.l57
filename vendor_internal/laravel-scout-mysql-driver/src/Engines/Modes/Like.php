@@ -3,11 +3,20 @@
 namespace ComdexxSolutionsLLC\MySQLScout\Engines\Modes;
 
 use Laravel\Scout\Builder;
-use ComdexxSolutionsLLC\MySQLScout\Services\ModelService;
 
 class Like extends Mode
 {
+
     protected $fields;
+
+    public function buildParams(Builder $builder)
+    {
+        for ($itr = 0; $itr < count($this->fields); ++ $itr) {
+            $this->whereParams[] = '%' . $builder->query . '%';
+        }
+
+        return $this->whereParams;
+    }
 
     public function buildWhereRawString(Builder $builder)
     {
@@ -27,15 +36,6 @@ class Like extends Mode
         $queryString .= ')';
 
         return $queryString;
-    }
-
-    public function buildParams(Builder $builder)
-    {
-        for ($itr = 0; $itr < count($this->fields); ++$itr) {
-            $this->whereParams[] = '%'.$builder->query.'%';
-        }
-
-        return $this->whereParams;
     }
 
     public function isFullText()

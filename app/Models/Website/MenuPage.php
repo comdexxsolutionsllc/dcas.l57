@@ -7,17 +7,16 @@ use App\Models\BaseModel;
 /**
  * App\Models\Website\MenuPage
  *
- * @property int                                                                             $id
- * @property string|null                                                                     $text
- * @property string|null                                                                     $route
- * @property string|null                                                                     $url
- * @property string|null                                                                     $target
- * @property string|null                                                                     $icon
- * @property string|null                                                                     $can
- * @property bool                                                                            $isTitle
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string|null                     $text
+ * @property string|null                     $route
+ * @property string|null                     $url
+ * @property string|null                     $target
+ * @property string|null                     $icon
+ * @property string|null                     $can
+ * @property bool                            $isTitle
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\MenuPage newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\MenuPage newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\MenuPage query()

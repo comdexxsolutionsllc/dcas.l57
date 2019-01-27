@@ -7,19 +7,18 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\Disk
  *
- * @property int                                                                             $id
- * @property string                                                                          $vendor
- * @property string                                                                          $series
- * @property string                                                                          $model
- * @property string                                                                          $interface
- * @property string                                                                          $capacity
- * @property string                                                                          $seed
- * @property string                                                                          $cache
- * @property string                                                                          $latency
- * @property string                                                                          $form_factor
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $vendor
+ * @property string                          $series
+ * @property string                          $model
+ * @property string                          $interface
+ * @property string                          $capacity
+ * @property string                          $seed
+ * @property string                          $cache
+ * @property string                          $latency
+ * @property string                          $form_factor
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Disk newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Disk newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Disk query()

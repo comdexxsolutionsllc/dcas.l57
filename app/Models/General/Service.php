@@ -18,7 +18,6 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @property \Illuminate\Support\Carbon|null                                                 $created_at
  * @property \Illuminate\Support\Carbon|null                                                 $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\General\InvoiceItem[] $invoiceItems
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Service newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Service newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Service query()

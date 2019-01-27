@@ -2,13 +2,14 @@
 
 namespace ComdexxSolutionsLLC\MySQLScout\Commands;
 
-use Illuminate\Console\Command;
-use ComdexxSolutionsLLC\MySQLScout\Services\IndexService;
-use Illuminate\Contracts\Events\Dispatcher;
 use ComdexxSolutionsLLC\MySQLScout\Events;
+use ComdexxSolutionsLLC\MySQLScout\Services\IndexService;
+use Illuminate\Console\Command;
+use Illuminate\Contracts\Events\Dispatcher;
 
 class ManageIndexes extends Command
 {
+
     /**
      * The name and signature of the console command.
      *
@@ -64,7 +65,7 @@ class ManageIndexes extends Command
         $model = $this->argument('model');
         $drop = $this->option('drop');
 
-        if (!$model) {
+        if (! $model) {
             $modelDirectories = config('scout.mysql.model_directories');
             $searchableModels = $this->indexService->getAllSearchableModels($modelDirectories);
 
@@ -76,17 +77,17 @@ class ManageIndexes extends Command
         }
     }
 
-    private function createOrUpdateModelIndex($searchableModel)
-    {
-        $this->info("Creating index for $searchableModel...");
-        $this->indexService->setModel($searchableModel);
-        $this->indexService->createOrUpdateIndex();
-    }
-
     private function dropModelIndex($searchableModel)
     {
         $this->info("Dropping index for $searchableModel...");
         $this->indexService->setModel($searchableModel);
         $this->indexService->dropIndex();
+    }
+
+    private function createOrUpdateModelIndex($searchableModel)
+    {
+        $this->info("Creating index for $searchableModel...");
+        $this->indexService->setModel($searchableModel);
+        $this->indexService->createOrUpdateIndex();
     }
 }

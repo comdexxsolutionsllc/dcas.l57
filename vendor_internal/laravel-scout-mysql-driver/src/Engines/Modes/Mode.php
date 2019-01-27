@@ -2,11 +2,12 @@
 
 namespace ComdexxSolutionsLLC\MySQLScout\Engines\Modes;
 
-use Laravel\Scout\Builder;
 use ComdexxSolutionsLLC\MySQLScout\Services\ModelService;
+use Laravel\Scout\Builder;
 
 abstract class Mode
 {
+
     protected $whereParams = [];
 
     protected $modelService;
@@ -47,10 +48,10 @@ abstract class Mode
     {
         $pattern = '/([A-Za-z_]+[A-Za-z_0-9]?)[ ]?(<>|!=|=|<=|<|>=|>)/';
 
-        $result = array();
+        $result = [];
         foreach ($wheres as $field => $value) {
             preg_match($pattern, $field, $matches);
-            $result [] = !empty($matches) ? array($matches[1], $matches[2], $value) : array($field, '=', $value);
+            $result [] = ! empty($matches) ? [$matches[1], $matches[2], $value] : [$field, '=', $value];
         }
 
         return $result;

@@ -7,18 +7,17 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\ServiceLimit
  *
- * @property int                                                                             $id
- * @property string                                                                          $resource_operation_name
- * @property int                                                                             $default_limit
- * @property int                                                                             $min_limit
- * @property int                                                                             $max_limit
- * @property int|null                                                                        $burst_capacity
- * @property int                                                                             $is_calls_per_second
- * @property string|null                                                                     $is_adjustable
- * @property string|null                                                                     $comments
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $resource_operation_name
+ * @property int                             $default_limit
+ * @property int                             $min_limit
+ * @property int                             $max_limit
+ * @property int|null                        $burst_capacity
+ * @property int                             $is_calls_per_second
+ * @property string|null                     $is_adjustable
+ * @property string|null                     $comments
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\ServiceLimit newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\ServiceLimit newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\ServiceLimit query()

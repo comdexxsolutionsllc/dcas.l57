@@ -7,12 +7,11 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\ServiceNamespace
  *
- * @property int                                                                             $id
- * @property int                                                                             $services_id
- * @property string                                                                          $namespace
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property int                             $services_id
+ * @property string                          $namespace
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\ServiceNamespace newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\ServiceNamespace newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\ServiceNamespace query()

@@ -7,14 +7,13 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\Queue
  *
- * @property int                                                                             $id
- * @property string                                                                          $name
- * @property string|null                                                                     $description
- * @property int                                                                             $visible
- * @property string|null                                                                     $deleted_at
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $name
+ * @property string|null                     $description
+ * @property int                             $visible
+ * @property string|null                     $deleted_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Queue newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Queue newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Queue query()

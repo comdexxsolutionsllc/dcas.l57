@@ -7,12 +7,11 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\AvailabilityZone
  *
- * @property int                                                                             $id
- * @property mixed                                                                           $region_ids
- * @property string|null                                                                     $comments
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property mixed                           $region_ids
+ * @property string|null                     $comments
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\AvailabilityZone newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\AvailabilityZone newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\AvailabilityZone query()

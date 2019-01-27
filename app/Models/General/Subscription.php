@@ -8,18 +8,17 @@ use App\Models\Roles\Customer;
 /**
  * App\Models\General\Subscription
  *
- * @property int                                                                             $id
- * @property int                                                                             $user_id
- * @property string                                                                          $name
- * @property string                                                                          $stripe_id
- * @property string                                                                          $stripe_plan
- * @property int                                                                             $quantity
- * @property bool|\DateTime                                                                  $trial_ends_at
- * @property bool|\DateTime                                                                  $ends_at
- * @property bool|\DateTime                                                                  $created_at
- * @property bool|\DateTime                                                                  $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
- * @property-read \App\Models\Roles\Customer                                                 $user
+ * @property int                             $id
+ * @property int                             $user_id
+ * @property string                          $name
+ * @property string                          $stripe_id
+ * @property string                          $stripe_plan
+ * @property int                             $quantity
+ * @property bool|\DateTime                  $trial_ends_at
+ * @property bool|\DateTime                  $ends_at
+ * @property bool|\DateTime                  $created_at
+ * @property bool|\DateTime                  $updated_at
+ * @property-read \App\Models\Roles\Customer $user
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Subscription newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Subscription newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Subscription query()

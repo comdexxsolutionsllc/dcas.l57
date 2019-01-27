@@ -17,6 +17,7 @@ class MyMailbox
      */
     public function __invoke(InboundEmail $email)
     {
-        // Handle the incoming email
+        \Log::warn($email);
+        //
     }
 }

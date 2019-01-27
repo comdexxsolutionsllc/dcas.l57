@@ -2,16 +2,17 @@
 
 namespace ComdexxSolutionsLLC\MySQLScout\Providers;
 
+use ComdexxSolutionsLLC\MySQLScout\Commands\ManageIndexes;
 use ComdexxSolutionsLLC\MySQLScout\Engines\Modes\ModeContainer;
+use ComdexxSolutionsLLC\MySQLScout\Engines\MySQLEngine;
+use ComdexxSolutionsLLC\MySQLScout\Services\IndexService;
+use ComdexxSolutionsLLC\MySQLScout\Services\ModelService;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Scout\EngineManager;
-use ComdexxSolutionsLLC\MySQLScout\Engines\MySQLEngine;
-use ComdexxSolutionsLLC\MySQLScout\Services\ModelService;
-use ComdexxSolutionsLLC\MySQLScout\Services\IndexService;
-use ComdexxSolutionsLLC\MySQLScout\Commands\ManageIndexes;
 
 class MySQLScoutServiceProvider extends ServiceProvider
 {
+
     /**
      * Bootstrap the application services.
      */
@@ -43,8 +44,8 @@ class MySQLScoutServiceProvider extends ServiceProvider
 
         $this->app->singleton(ModeContainer::class, function ($app) {
             $engineNamespace = 'ComdexxSolutionsLLC\\MySQLScout\\Engines\\Modes\\';
-            $mode = $engineNamespace.studly_case(strtolower(config('scout.mysql.mode')));
-            $fallbackMode = $engineNamespace.studly_case(strtolower(config('scout.mysql.min_fulltext_search_fallback')));
+            $mode = $engineNamespace . studly_case(strtolower(config('scout.mysql.mode')));
+            $fallbackMode = $engineNamespace . studly_case(strtolower(config('scout.mysql.min_fulltext_search_fallback')));
 
             return new ModeContainer(new $mode(), new $fallbackMode());
         });

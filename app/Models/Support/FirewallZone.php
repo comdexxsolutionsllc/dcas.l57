@@ -7,14 +7,13 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\FirewallZone
  *
- * @property int                                                                             $id
- * @property string                                                                          $network_asset_number
- * @property int                                                                             $datacenter_id
- * @property int                                                                             $network_device_id
- * @property string|null                                                                     $available
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $network_asset_number
+ * @property int                             $datacenter_id
+ * @property int                             $network_device_id
+ * @property string|null                     $available
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\FirewallZone newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\FirewallZone newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\FirewallZone query()

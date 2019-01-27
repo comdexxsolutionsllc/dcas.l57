@@ -7,18 +7,17 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\NetworkInterfaceCard
  *
- * @property int                                                                             $id
- * @property string                                                                          $speed
- * @property string                                                                          $duplex
- * @property string|null                                                                     $mac_address
- * @property string|null                                                                     $serial_number
- * @property int                                                                             $number_of_ports
- * @property string                                                                          $vendor
- * @property string                                                                          $model
- * @property string                                                                          $status
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $speed
+ * @property string                          $duplex
+ * @property string|null                     $mac_address
+ * @property string|null                     $serial_number
+ * @property int                             $number_of_ports
+ * @property string                          $vendor
+ * @property string                          $model
+ * @property string                          $status
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\NetworkInterfaceCard newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\NetworkInterfaceCard newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\NetworkInterfaceCard query()

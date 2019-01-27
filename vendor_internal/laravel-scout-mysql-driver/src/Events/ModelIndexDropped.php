@@ -4,6 +4,7 @@ namespace ComdexxSolutionsLLC\MySQLScout\Events;
 
 class ModelIndexDropped
 {
+
     public $indexName;
 
     /**

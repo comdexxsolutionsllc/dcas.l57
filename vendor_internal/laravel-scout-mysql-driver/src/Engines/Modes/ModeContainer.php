@@ -4,6 +4,7 @@ namespace ComdexxSolutionsLLC\MySQLScout\Engines\Modes;
 
 class ModeContainer
 {
+
     public $mode;
 
     public $fallbackMode;

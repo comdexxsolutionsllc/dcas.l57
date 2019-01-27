@@ -80,6 +80,8 @@ class Kernel extends HttpKernel
         'vendor'         => \App\Http\Middleware\Vendor::class,
         'verified'       => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'whitegloves'    => \App\Http\Middleware\WhiteGlove::class,
+
+        'mailgun.webhook' => \App\Http\Middleware\ValidateMailgunWebhook::class,
     ];
 
     /**

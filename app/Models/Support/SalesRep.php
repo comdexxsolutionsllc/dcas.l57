@@ -12,15 +12,14 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /**
  * App\Models\Support\SalesRep
  *
- * @property int                                                                             $id
- * @property int                                                                             $employee_id
- * @property int                                                                             $company_id
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\General\Company[]     $company
- * @property-read \App\Models\Roles\Employee                                                 $employee
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
- * @property-read \App\Models\General\Reseller                                               $reseller
+ * @property int                                                                         $id
+ * @property int                                                                         $employee_id
+ * @property int                                                                         $company_id
+ * @property \Illuminate\Support\Carbon|null                                             $created_at
+ * @property \Illuminate\Support\Carbon|null                                             $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\General\Company[] $company
+ * @property-read \App\Models\Roles\Employee                                             $employee
+ * @property-read \App\Models\General\Reseller                                           $reseller
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\SalesRep newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\SalesRep newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\SalesRep query()

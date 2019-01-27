@@ -7,17 +7,16 @@ use App\Models\BaseModel;
 /**
  * App\Models\General\Coupon
  *
- * @property int                                                                             $id
- * @property string                                                                          $type
- * @property string                                                                          $code
- * @property string                                                                          $value
- * @property string                                                                          $minimum_amount
- * @property string                                                                          $maximum_discount
- * @property \Illuminate\Support\Carbon                                                      $valid_start_time
- * @property \Illuminate\Support\Carbon                                                      $valid_end_time
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $type
+ * @property string                          $code
+ * @property string                          $value
+ * @property string                          $minimum_amount
+ * @property string                          $maximum_discount
+ * @property \Illuminate\Support\Carbon      $valid_start_time
+ * @property \Illuminate\Support\Carbon      $valid_end_time
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Coupon newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Coupon newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Coupon query()

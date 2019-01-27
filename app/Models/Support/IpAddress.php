@@ -7,25 +7,24 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\IpAddress
  *
- * @property int                                                                             $id
- * @property int|null                                                                        $asset_owner
- * @property int                                                                             $network_interface_card_id
- * @property int|null                                                                        $firewall_zone_id
- * @property int                                                                             $port_number
- * @property string|null                                                                     $accountable_type
- * @property int|null                                                                        $accountable_id
- * @property string                                                                          $ip_address
- * @property string                                                                          $ip_address_type
- * @property string                                                                          $ip_address_visibility
- * @property string                                                                          $gateway_address
- * @property int                                                                             $subnet_address_id
- * @property string|null                                                                     $other_ip_addresses
- * @property int                                                                             $active
- * @property string|null                                                                     $notes
- * @property string                                                                          $allocation_date
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property int|null                        $asset_owner
+ * @property int                             $network_interface_card_id
+ * @property int|null                        $firewall_zone_id
+ * @property int                             $port_number
+ * @property string|null                     $accountable_type
+ * @property int|null                        $accountable_id
+ * @property string                          $ip_address
+ * @property string                          $ip_address_type
+ * @property string                          $ip_address_visibility
+ * @property string                          $gateway_address
+ * @property int                             $subnet_address_id
+ * @property string|null                     $other_ip_addresses
+ * @property int                             $active
+ * @property string|null                     $notes
+ * @property string                          $allocation_date
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\IpAddress newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\IpAddress newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\IpAddress query()

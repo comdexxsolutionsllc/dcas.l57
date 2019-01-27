@@ -7,16 +7,15 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\SecurityGroup
  *
- * @property int                                                                             $id
- * @property string                                                                          $security_group_serial
- * @property string                                                                          $source
- * @property string                                                                          $direction
- * @property string                                                                          $protocol
- * @property mixed                                                                           $port_range
- * @property string|null                                                                     $comments
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $security_group_serial
+ * @property string                          $source
+ * @property string                          $direction
+ * @property string                          $protocol
+ * @property mixed                           $port_range
+ * @property string|null                     $comments
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\SecurityGroup newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\SecurityGroup newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\SecurityGroup query()

@@ -8,16 +8,15 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /**
  * App\Models\Support\Department
  *
- * @property int                                                                             $id
- * @property string                                                                          $name
- * @property string|null                                                                     $description
- * @property string                                                                          $hexcode
- * @property int                                                                             $visible
- * @property bool|\DateTime                                                                  $deleted_at
- * @property bool|\DateTime                                                                  $created_at
- * @property bool|\DateTime                                                                  $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Support\Ticket[]      $tickets
+ * @property int                                                                        $id
+ * @property string                                                                     $name
+ * @property string|null                                                                $description
+ * @property string                                                                     $hexcode
+ * @property int                                                                        $visible
+ * @property bool|\DateTime                                                             $deleted_at
+ * @property bool|\DateTime                                                             $created_at
+ * @property bool|\DateTime                                                             $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Support\Ticket[] $tickets
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Department newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Department newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Department query()

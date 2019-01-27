@@ -2,13 +2,14 @@
 
 namespace ComdexxSolutionsLLC\MySQLScout\Services;
 
-use Laravel\Scout\Searchable;
-use Illuminate\Support\Facades\DB;
 use ComdexxSolutionsLLC\MySQLScout\Events;
 use Illuminate\Container\Container;
+use Illuminate\Support\Facades\DB;
+use Laravel\Scout\Searchable;
 
 class IndexService
 {
+
     protected $modelService;
 
     public function __construct(ModelService $modelService)
@@ -26,7 +27,7 @@ class IndexService
         $searchableModels = [];
 
         foreach ($directories as $directory) {
-            $files = glob($directory.'/*.php');
+            $files = glob($directory . '/*.php');
 
             foreach ($files as $file) {
                 $class = getClassFullNameFromFile($file);
@@ -37,8 +38,7 @@ class IndexService
 
                 $modelInstance = new $class();
 
-                $connectionName = $modelInstance->getConnectionName() !== null ?
-                    $modelInstance->getConnectionName() : config('database.default');
+                $connectionName = $modelInstance->getConnectionName() !== null ? $modelInstance->getConnectionName() : config('database.default');
 
                 $isMySQL = config("database.connections.$connectionName.driver") === 'mysql';
 
@@ -64,31 +64,12 @@ class IndexService
         }
     }
 
-    protected function createIndex()
-    {
-        $indexName = $this->modelService->indexName;
-        $tableName = $this->modelService->tablePrefixedName;
-        $indexFields = implode(',', array_map(function($indexField) {
-            return "`$indexField`";
-        }, $this->modelService->getFullTextIndexFields()));
-
-        if (empty($indexFields)) {
-            return;
-        }
-
-        DB::connection($this->modelService->connectionName)
-            ->statement("CREATE FULLTEXT INDEX $indexName ON $tableName ($indexFields)");
-
-        event(new Events\ModelIndexCreated($indexName, $indexFields));
-    }
-
     protected function indexAlreadyExists()
     {
         $tableName = $this->modelService->tablePrefixedName;
         $indexName = $this->modelService->indexName;
 
-        return !empty(DB::connection($this->modelService->connectionName)->
-        select("SHOW INDEX FROM $tableName WHERE Key_name = ?", [$indexName]));
+        return ! empty(DB::connection($this->modelService->connectionName)->select("SHOW INDEX FROM $tableName WHERE Key_name = ?", [$indexName]));
     }
 
     protected function indexNeedsUpdate()
@@ -104,8 +85,7 @@ class IndexService
         $indexName = $this->modelService->indexName;
         $tableName = $this->modelService->tablePrefixedName;
 
-        $index = DB::connection($this->modelService->connectionName)->
-        select("SHOW INDEX FROM $tableName WHERE Key_name = ?", [$indexName]);
+        $index = DB::connection($this->modelService->connectionName)->select("SHOW INDEX FROM $tableName WHERE Key_name = ?", [$indexName]);
 
         $indexFields = [];
 
@@ -114,11 +94,6 @@ class IndexService
         }
 
         return $indexFields;
-    }
-
-    public function getAppNamespace()
-    {
-        return Container::getInstance()->getNamespace();
     }
 
     protected function updateIndex()
@@ -134,9 +109,30 @@ class IndexService
         $tableName = $this->modelService->tablePrefixedName;
 
         if ($this->indexAlreadyExists()) {
-            DB::connection($this->modelService->connectionName)
-                ->statement("ALTER TABLE $tableName DROP INDEX $indexName");
+            DB::connection($this->modelService->connectionName)->statement("ALTER TABLE $tableName DROP INDEX $indexName");
             event(new Events\ModelIndexDropped($this->modelService->indexName));
         }
+    }
+
+    protected function createIndex()
+    {
+        $indexName = $this->modelService->indexName;
+        $tableName = $this->modelService->tablePrefixedName;
+        $indexFields = implode(',', array_map(function ($indexField) {
+            return "`$indexField`";
+        }, $this->modelService->getFullTextIndexFields()));
+
+        if (empty($indexFields)) {
+            return;
+        }
+
+        DB::connection($this->modelService->connectionName)->statement("CREATE FULLTEXT INDEX $indexName ON $tableName ($indexFields)");
+
+        event(new Events\ModelIndexCreated($indexName, $indexFields));
+    }
+
+    public function getAppNamespace()
+    {
+        return Container::getInstance()->getNamespace();
     }
 }

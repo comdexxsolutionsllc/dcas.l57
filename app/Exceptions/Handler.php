@@ -67,9 +67,9 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $exception)
     {
-        if (app()->bound('sentry')) {
-            app('log')->info('Submitted exception to Sentry with id:' . app('sentry')->captureException($exception));
-        }
+//        if (app()->bound('sentry')) {
+//            app('log')->info('Submitted exception to Sentry with id:' . app('sentry')->captureException($exception));
+//        }
 
         parent::report($exception);
     }

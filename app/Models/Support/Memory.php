@@ -7,18 +7,17 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\Memory
  *
- * @property int                                                                             $id
- * @property string                                                                          $vendor
- * @property string                                                                          $model
- * @property string                                                                          $capacity
- * @property string                                                                          $type
- * @property string                                                                          $speed
- * @property int                                                                             $ecc
- * @property int                                                                             $buffered
- * @property int                                                                             $registered
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $vendor
+ * @property string                          $model
+ * @property string                          $capacity
+ * @property string                          $type
+ * @property string                          $speed
+ * @property int                             $ecc
+ * @property int                             $buffered
+ * @property int                             $registered
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Memory newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Memory newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Memory query()

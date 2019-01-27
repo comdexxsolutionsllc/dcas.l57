@@ -7,16 +7,15 @@ use App\Models\BaseModel;
 /**
  * App\Models\General\Product
  *
- * @property int                                                                             $id
- * @property string                                                                          $qty On-hand qty
- * @property string                                                                          $name
- * @property string|null                                                                     $description
- * @property bool                                                                            $taxable
- * @property bool                                                                            $lineItem
- * @property string                                                                          $price
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $qty On-hand qty
+ * @property string                          $name
+ * @property string|null                     $description
+ * @property bool                            $taxable
+ * @property bool                            $lineItem
+ * @property string                          $price
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Product newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Product newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Product query()

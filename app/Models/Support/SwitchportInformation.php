@@ -8,20 +8,19 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  * App\Models\Support\SwitchportInformation
  *
- * @property int                                                                             $id
- * @property int                                                                             $network_device_id
- * @property int                                                                             $switchport_number
- * @property string                                                                          $category
- * @property string                                                                          $port_speed
- * @property string                                                                          $connection_type
- * @property string                                                                          $poe_status
- * @property string                                                                          $stackable_status
- * @property string                                                                          $duplex_type
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
- * @property-read \App\Models\Support\NetworkConfiguration                                   $networkConfiguration
- * @property-read \App\Models\Support\NetworkDevice                                          $networkDevice
+ * @property int                                           $id
+ * @property int                                           $network_device_id
+ * @property int                                           $switchport_number
+ * @property string                                        $category
+ * @property string                                        $port_speed
+ * @property string                                        $connection_type
+ * @property string                                        $poe_status
+ * @property string                                        $stackable_status
+ * @property string                                        $duplex_type
+ * @property \Illuminate\Support\Carbon|null               $created_at
+ * @property \Illuminate\Support\Carbon|null               $updated_at
+ * @property-read \App\Models\Support\NetworkConfiguration $networkConfiguration
+ * @property-read \App\Models\Support\NetworkDevice        $networkDevice
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\SwitchportInformation newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\SwitchportInformation newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\SwitchportInformation query()

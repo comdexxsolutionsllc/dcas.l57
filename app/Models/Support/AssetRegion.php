@@ -7,14 +7,13 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\AssetRegion
  *
- * @property int                                                                             $id
- * @property string                                                                          $name
- * @property string                                                                          $identifier
- * @property string                                                                          $endpoint
- * @property string                                                                          $protocol
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $name
+ * @property string                          $identifier
+ * @property string                          $endpoint
+ * @property string                          $protocol
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\AssetRegion newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\AssetRegion newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\AssetRegion query()

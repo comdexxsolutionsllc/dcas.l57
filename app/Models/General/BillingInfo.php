@@ -8,22 +8,21 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  * App\Models\General\BillingInfo
  *
- * @property int                                                                             $id
- * @property string                                                                          $first_name
- * @property string                                                                          $last_name
- * @property string|null                                                                     $company
- * @property string                                                                          $address_1
- * @property string|null                                                                     $address_2
- * @property string                                                                          $city
- * @property string                                                                          $state
- * @property string                                                                          $postal_code
- * @property string                                                                          $country
- * @property string                                                                          $phone_number
- * @property string                                                                          $phone_type
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \App\Models\General\Invoice                                                $invoice
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                              $id
+ * @property string                           $first_name
+ * @property string                           $last_name
+ * @property string|null                      $company
+ * @property string                           $address_1
+ * @property string|null                      $address_2
+ * @property string                           $city
+ * @property string                           $state
+ * @property string                           $postal_code
+ * @property string                           $country
+ * @property string                           $phone_number
+ * @property string                           $phone_type
+ * @property \Illuminate\Support\Carbon|null  $created_at
+ * @property \Illuminate\Support\Carbon|null  $updated_at
+ * @property-read \App\Models\General\Invoice $invoice
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\BillingInfo newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\BillingInfo newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\BillingInfo query()

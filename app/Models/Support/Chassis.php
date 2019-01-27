@@ -7,23 +7,22 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\Chassis
  *
- * @property int                                                                             $id
- * @property int|null                                                                        $asset_owner
- * @property string|null                                                                     $accountable_type
- * @property int|null                                                                        $accountable_id
- * @property string                                                                          $vendor
- * @property string                                                                          $model
- * @property string|null                                                                     $serial_number
- * @property string                                                                          $form_factor_in_u
- * @property string                                                                          $chassis_type
- * @property string                                                                          $power_supply
- * @property int                                                                             $hot_swap_drive_bays
- * @property int                                                                             $internal_drive_bays
- * @property int                                                                             $expansion_slots
- * @property string                                                                          $expansion_slot_information
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property int|null                        $asset_owner
+ * @property string|null                     $accountable_type
+ * @property int|null                        $accountable_id
+ * @property string                          $vendor
+ * @property string                          $model
+ * @property string|null                     $serial_number
+ * @property string                          $form_factor_in_u
+ * @property string                          $chassis_type
+ * @property string                          $power_supply
+ * @property int                             $hot_swap_drive_bays
+ * @property int                             $internal_drive_bays
+ * @property int                             $expansion_slots
+ * @property string                          $expansion_slot_information
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Chassis newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Chassis newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Chassis query()

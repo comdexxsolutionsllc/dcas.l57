@@ -9,16 +9,15 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 /**
  * App\Models\General\Reseller
  *
- * @property int                                                                             $id
- * @property string                                                                          $account_id
- * @property int                                                                             $company_id
- * @property string|null                                                                     $expiry_date
- * @property int                                                                             $salesrep_id
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \App\Models\General\Company                                                $company
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
- * @property-read \App\Models\Support\SalesRep                                               $salesRep
+ * @property int                               $id
+ * @property string                            $account_id
+ * @property int                               $company_id
+ * @property string|null                       $expiry_date
+ * @property int                               $salesrep_id
+ * @property \Illuminate\Support\Carbon|null   $created_at
+ * @property \Illuminate\Support\Carbon|null   $updated_at
+ * @property-read \App\Models\General\Company  $company
+ * @property-read \App\Models\Support\SalesRep $salesRep
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Reseller newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Reseller newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Reseller query()

@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'no-reply@dcas.tld'),
+        'address' => env('MAIL_FROM_ADDRESS', 'no-reply@dcas.live'),
         'name'    => env('MAIL_FROM_NAME', 'Datacenter Automation Suite'),
     ],
 

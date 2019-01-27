@@ -7,15 +7,14 @@ use App\Models\BaseModel;
 /**
  * App\Models\General\Notification
  *
- * @property string                                                                          $id
- * @property string                                                                          $type
- * @property string                                                                          $notifiable_type
- * @property int                                                                             $notifiable_id
- * @property string                                                                          $data
- * @property bool|\DateTime                                                                  $read_at
- * @property bool|\DateTime                                                                  $created_at
- * @property bool|\DateTime                                                                  $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property string         $id
+ * @property string         $type
+ * @property string         $notifiable_type
+ * @property int            $notifiable_id
+ * @property string         $data
+ * @property bool|\DateTime $read_at
+ * @property bool|\DateTime $created_at
+ * @property bool|\DateTime $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Notification newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Notification newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Notification query()

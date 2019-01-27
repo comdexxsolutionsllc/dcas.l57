@@ -4,7 +4,9 @@ namespace ComdexxSolutionsLLC\MySQLScout\Events;
 
 class ModelIndexCreated
 {
+
     public $indexName;
+
     public $indexFields;
 
     /**

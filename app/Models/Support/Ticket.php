@@ -8,24 +8,23 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
 /**
  * App\Models\Support\Ticket
  *
- * @property int                                                                             $id
- * @property string                                                                          $ticket_id
- * @property string                                                                          $title
- * @property string                                                                          $body
- * @property int                                                                             $status_id
- * @property int                                                                             $department_id
- * @property int                                                                             $technician_assigned_id
- * @property int                                                                             $is_resolved
- * @property bool|\DateTime                                                                  $deleted_at
- * @property bool|\DateTime                                                                  $created_at
- * @property bool|\DateTime                                                                  $updated_at
- * @property string                                                                          $ticketable_type
- * @property int                                                                             $ticketable_id
- * @property-read \App\Models\Support\Department                                             $department
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
- * @property-read \App\Models\Support\Status                                                 $status
- * @property-read \App\Models\Support\Technician                                             $technicianAssigned
- * @property-read \Illuminate\Database\Eloquent\Model|\Eloquent                              $user
+ * @property int                                                                        $id
+ * @property string                                                                     $ticket_id
+ * @property string                                                                     $title
+ * @property string                                                                     $body
+ * @property int                                                                        $status_id
+ * @property int                                                                        $department_id
+ * @property int                                                                        $technician_assigned_id
+ * @property int                                                                        $is_resolved
+ * @property bool|\DateTime                                                             $deleted_at
+ * @property bool|\DateTime                                                             $created_at
+ * @property bool|\DateTime                                                             $updated_at
+ * @property string                                                                     $ticketable_type
+ * @property int                                                                        $ticketable_id
+ * @property-read \App\Models\Support\Department                                        $department
+ * @property-read \App\Models\Support\Status                                            $status
+ * @property-read \App\Models\Support\Technician                                        $technicianAssigned
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Support\Ticket[] $user
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Ticket newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Ticket newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Ticket query()

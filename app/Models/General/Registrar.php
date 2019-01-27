@@ -8,14 +8,13 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /**
  * App\Models\General\Registrar
  *
- * @property int                                                                             $id
- * @property string                                                                          $name
- * @property string                                                                          $url
- * @property string                                                                          $type
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\General\Domain[]      $domains
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                                                                        $id
+ * @property string                                                                     $name
+ * @property string                                                                     $url
+ * @property string                                                                     $type
+ * @property \Illuminate\Support\Carbon|null                                            $created_at
+ * @property \Illuminate\Support\Carbon|null                                            $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\General\Domain[] $domains
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Registrar newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Registrar newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Registrar query()

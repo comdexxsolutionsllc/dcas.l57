@@ -7,13 +7,12 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\TldExtension
  *
- * @property int                                                                             $id
- * @property string                                                                          $domain
- * @property string|null                                                                     $description
- * @property string                                                                          $type
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $domain
+ * @property string|null                     $description
+ * @property string                          $type
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\TldExtension newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\TldExtension newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\TldExtension query()

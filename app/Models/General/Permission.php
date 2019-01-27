@@ -19,7 +19,7 @@ use Spatie\Permission\Models\Permission as BasePermission;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Permission newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Permission\Models\Permission permission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Permission query()
- * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Permission\Models\Permission role($roles)
+ * @method static \Illuminate\Database\Eloquent\Builder|\Spatie\Permission\Models\Permission role($roles, $guard = null)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Permission whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Permission whereGuardName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Permission whereId($value)

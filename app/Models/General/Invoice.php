@@ -24,7 +24,6 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  * @property \Illuminate\Support\Carbon|null                                                 $updated_at
  * @property-read \App\Models\General\BillingInfo                                            $billingInfo
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\General\InvoiceItem[] $invoiceItems
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Invoice newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Invoice newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Invoice query()

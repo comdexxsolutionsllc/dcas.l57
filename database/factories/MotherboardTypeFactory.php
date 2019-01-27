@@ -27,10 +27,10 @@ $factory->define(App\Models\Support\MotherboardType::class, function (Faker $fak
         'expansion_slots'           => $faker->word,
         'front_side_bus'            => $faker->word,
         'hdd_connection_type'       => $faker->randomElement([
-                'SCSI',
-                'SATA',
-                'SAS',
-            ]),
+            'SCSI',
+            'SATA',
+            'SAS',
+        ]),
         'processor_information'     => [],
     ];
 });

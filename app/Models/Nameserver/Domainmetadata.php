@@ -7,14 +7,13 @@ use App\Models\BaseModel;
 /**
  * App\Models\Nameserver\Domainmetadata
  *
- * @property int                                                                             $id
- * @property int                                                                             $domain_id
- * @property string|null                                                                     $kind
- * @property string|null                                                                     $content
- * @property array                                                                           $created_at
- * @property array                                                                           $updated_at
- * @property-read \App\Models\Nameserver\Domain                                              $domain
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                                $id
+ * @property int                                $domain_id
+ * @property string|null                        $kind
+ * @property string|null                        $content
+ * @property array                              $created_at
+ * @property array                              $updated_at
+ * @property-read \App\Models\Nameserver\Domain $domain
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Domainmetadata newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Domainmetadata newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Domainmetadata query()

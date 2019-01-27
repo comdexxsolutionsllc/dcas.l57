@@ -3,11 +3,24 @@
 namespace ComdexxSolutionsLLC\MySQLScout\Engines\Modes;
 
 use Laravel\Scout\Builder;
-use ComdexxSolutionsLLC\MySQLScout\Services\ModelService;
 
 class LikeExpanded extends Mode
 {
+
     protected $fields;
+
+    public function buildParams(Builder $builder)
+    {
+        $words = explode(' ', $builder->query);
+
+        for ($i = 0; $i < count($this->fields); ++ $i) {
+            foreach ($words as $word) {
+                $this->whereParams[] = '%' . $word . '%';
+            }
+        }
+
+        return $this->whereParams;
+    }
 
     public function buildWhereRawString(Builder $builder)
     {
@@ -30,20 +43,7 @@ class LikeExpanded extends Mode
         $queryString = trim($queryString, 'OR ');
         $queryString .= ')';
 
-        return$queryString;
-    }
-
-    public function buildParams(Builder $builder)
-    {
-        $words = explode(' ', $builder->query);
-
-        for ($i = 0; $i < count($this->fields); ++$i) {
-            foreach ($words as $word) {
-                $this->whereParams[] = '%'.$word.'%';
-            }
-        }
-
-        return $this->whereParams;
+        return $queryString;
     }
 
     public function isFullText()

@@ -2,19 +2,20 @@
 
 namespace App\Models;
 
-use Altek\Accountant\Contracts\Recordable as IRecordable;
-use Altek\Accountant\Recordable;
-use Altek\Eventually\Eventually;
+//use Altek\Accountant\Contracts\Recordable as IRecordable;
+//use Altek\Accountant\Recordable;
+//use Altek\Eventually\Eventually;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
 
 /**
  * Class BaseModel
  */
-abstract class BaseModel extends Model implements IRecordable
+abstract class BaseModel extends Model //implements IRecordable
 {
 
-    use Eventually, Recordable, Searchable;
+    //use Eventually, Recordable,
+    use Searchable;
 
     /**
      * Displayable Fields for export.

@@ -7,15 +7,14 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\ResourceName
  *
- * @property int                                                                             $id
- * @property string                                                                          $partition
- * @property int                                                                             $service_namespace_id
- * @property int                                                                             $service_region_id
- * @property string                                                                          $accountable_type
- * @property int                                                                             $accountable_id
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $partition
+ * @property int                             $service_namespace_id
+ * @property int                             $service_region_id
+ * @property string                          $accountable_type
+ * @property int                             $accountable_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\ResourceName newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\ResourceName newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\ResourceName query()

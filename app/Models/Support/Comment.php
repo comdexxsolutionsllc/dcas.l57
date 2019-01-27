@@ -7,13 +7,12 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\Comment
  *
- * @property int                                                                             $id
- * @property string                                                                          $body
- * @property string                                                                          $commentable_type
- * @property int                                                                             $commentable_id
- * @property bool|\DateTime                                                                  $created_at
- * @property bool|\DateTime                                                                  $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int            $id
+ * @property string         $body
+ * @property string         $commentable_type
+ * @property int            $commentable_id
+ * @property bool|\DateTime $created_at
+ * @property bool|\DateTime $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Comment newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Comment newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Comment query()

@@ -7,13 +7,12 @@ use App\Models\BaseModel;
 /**
  * App\Models\Nameserver\Supermaster
  *
- * @property int                                                                             $id
- * @property string                                                                          $ip
- * @property string                                                                          $nameserver
- * @property string                                                                          $account
- * @property array                                                                           $created_at
- * @property array                                                                           $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int    $id
+ * @property string $ip
+ * @property string $nameserver
+ * @property string $account
+ * @property array  $created_at
+ * @property array  $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Supermaster newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Supermaster newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Supermaster query()

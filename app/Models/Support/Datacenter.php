@@ -9,15 +9,14 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 /**
  * App\Models\Support\Datacenter
  *
- * @property int                                                                             $id
- * @property string                                                                          $code
- * @property string                                                                          $location
- * @property string                                                                          $status
- * @property string                                                                          $opening_date
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\General\Asset[]       $assets
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                                                                       $id
+ * @property string                                                                    $code
+ * @property string                                                                    $location
+ * @property string                                                                    $status
+ * @property string                                                                    $opening_date
+ * @property \Illuminate\Support\Carbon|null                                           $created_at
+ * @property \Illuminate\Support\Carbon|null                                           $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\General\Asset[] $assets
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Datacenter newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Datacenter newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Datacenter query()

@@ -7,15 +7,14 @@ use App\Models\BaseModel;
 /**
  * App\Models\Nameserver\Cryptokey
  *
- * @property int                                                                             $id
- * @property int                                                                             $domain_id
- * @property int                                                                             $flags
- * @property int|null                                                                        $active
- * @property string|null                                                                     $content
- * @property array                                                                           $created_at
- * @property array                                                                           $updated_at
- * @property-read \App\Models\Nameserver\Domain                                              $domain
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                                $id
+ * @property int                                $domain_id
+ * @property int                                $flags
+ * @property int|null                           $active
+ * @property string|null                        $content
+ * @property array                              $created_at
+ * @property array                              $updated_at
+ * @property-read \App\Models\Nameserver\Domain $domain
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Cryptokey newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Cryptokey newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Cryptokey query()

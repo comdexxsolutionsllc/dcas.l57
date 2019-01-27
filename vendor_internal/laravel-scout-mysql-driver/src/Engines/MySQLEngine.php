@@ -20,16 +20,55 @@ class MySQLEngine extends Engine
         $this->fallbackMode = $modeContainer->fallbackMode;
     }
 
-    public function update($models)
-    {
-    }
-
     public function delete($models)
     {
     }
 
+    /**
+     * Get the total count from a raw result returned by the engine.
+     *
+     * @param mixed $results
+     *
+     * @return int
+     */
+    public function getTotalCount($results)
+    {
+        return $results['count'];
+    }
+
+    /**
+     * Map the given results to instances of the given model.
+     *
+     * @param  \Laravel\Scout\Builder              $builder
+     * @param  mixed                               $results
+     * @param  \Illuminate\Database\Eloquent\Model $model
+     *
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function map(Builder $builder, $results, $model)
+    {
+        return $results['results'];
+    }
+
     public function mapIds($results)
     {
+    }
+
+    /**
+     * Perform the given search on the engine.
+     *
+     * @param Builder $builder
+     * @param int     $perPage
+     * @param int     $page
+     *
+     * @return mixed
+     */
+    public function paginate(Builder $builder, $perPage, $page)
+    {
+        $builder->limit = $perPage;
+        $builder->offset = ($perPage * $page) - $perPage;
+
+        return $this->search($builder);
     }
 
     /**
@@ -79,49 +118,6 @@ class MySQLEngine extends Engine
         return $result;
     }
 
-    /**
-     * Perform the given search on the engine.
-     *
-     * @param Builder $builder
-     * @param int     $perPage
-     * @param int     $page
-     *
-     * @return mixed
-     */
-    public function paginate(Builder $builder, $perPage, $page)
-    {
-        $builder->limit = $perPage;
-        $builder->offset = ($perPage * $page) - $perPage;
-
-        return $this->search($builder);
-    }
-
-    /**
-     * Map the given results to instances of the given model.
-     *
-     * @param  \Laravel\Scout\Builder              $builder
-     * @param  mixed                               $results
-     * @param  \Illuminate\Database\Eloquent\Model $model
-     *
-     * @return \Illuminate\Database\Eloquent\Collection
-     */
-    public function map(Builder $builder, $results, $model)
-    {
-        return $results['results'];
-    }
-
-    /**
-     * Get the total count from a raw result returned by the engine.
-     *
-     * @param mixed $results
-     *
-     * @return int
-     */
-    public function getTotalCount($results)
-    {
-        return $results['count'];
-    }
-
     protected function shouldNotRun($builder)
     {
         return strlen($builder->query) < config('scout.mysql.min_search_length');
@@ -130,5 +126,9 @@ class MySQLEngine extends Engine
     protected function shouldUseFallback($builder)
     {
         return $this->mode->isFullText() && strlen($builder->query) < config('scout.mysql.min_fulltext_search_length');
+    }
+
+    public function update($models)
+    {
     }
 }

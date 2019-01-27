@@ -39,7 +39,7 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Roles\Whiteglove newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Roles\BaseRole permission($permissions)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Roles\Whiteglove query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Roles\BaseRole role($roles)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Roles\BaseRole role($roles, $guard = null)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Roles\Whiteglove whereAccountId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Roles\Whiteglove whereAvatar($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Roles\Whiteglove whereCardBrand($value)

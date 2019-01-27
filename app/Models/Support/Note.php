@@ -7,13 +7,12 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\Note
  *
- * @property int                                                                             $id
- * @property string                                                                          $body
- * @property string                                                                          $noteable_type
- * @property int                                                                             $noteable_id
- * @property bool|\DateTime                                                                  $created_at
- * @property bool|\DateTime                                                                  $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int            $id
+ * @property string         $body
+ * @property string         $noteable_type
+ * @property int            $noteable_id
+ * @property bool|\DateTime $created_at
+ * @property bool|\DateTime $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Note newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Note newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\Note query()

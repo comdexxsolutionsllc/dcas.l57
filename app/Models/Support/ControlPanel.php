@@ -7,21 +7,20 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\ControlPanel
  *
- * @property int                                                                             $id
- * @property string                                                                          $control_panel
- * @property int                                                                             $free
- * @property string                                                                          $frontend
- * @property string                                                                          $backend
- * @property string                                                                          $databases
- * @property string                                                                          $dns
- * @property string                                                                          $ftp
- * @property string                                                                          $email
- * @property int                                                                             $multi_server
- * @property string                                                                          $operating_system
- * @property int                                                                             $ipv6_enabled
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $control_panel
+ * @property int                             $free
+ * @property string                          $frontend
+ * @property string                          $backend
+ * @property string                          $databases
+ * @property string                          $dns
+ * @property string                          $ftp
+ * @property string                          $email
+ * @property int                             $multi_server
+ * @property string                          $operating_system
+ * @property int                             $ipv6_enabled
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\ControlPanel newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\ControlPanel newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\ControlPanel query()

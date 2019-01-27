@@ -8,20 +8,19 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  * App\Models\General\Domain
  *
- * @property int                                                                             $id
- * @property int                                                                             $account_id
- * @property string                                                                          $account_type
- * @property int                                                                             $registrar_id
- * @property string                                                                          $domain_name
- * @property int                                                                             $active
- * @property int                                                                             $monitor
- * @property string|null                                                                     $whois_record_updated
- * @property string|null                                                                     $whois_record_created
- * @property string|null                                                                     $whois_record_expiry
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
- * @property-read \App\Models\General\Registrar                                              $registrar
+ * @property int                                $id
+ * @property int                                $account_id
+ * @property string                             $account_type
+ * @property int                                $registrar_id
+ * @property string                             $domain_name
+ * @property int                                $active
+ * @property int                                $monitor
+ * @property string|null                        $whois_record_updated
+ * @property string|null                        $whois_record_created
+ * @property string|null                        $whois_record_expiry
+ * @property \Illuminate\Support\Carbon|null    $created_at
+ * @property \Illuminate\Support\Carbon|null    $updated_at
+ * @property-read \App\Models\General\Registrar $registrar
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Domain newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Domain newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Domain query()

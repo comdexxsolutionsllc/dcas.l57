@@ -8,17 +8,16 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  * App\Models\General\Company
  *
- * @property int                                                                             $id
- * @property string                                                                          $name
- * @property string                                                                          $contact_name
- * @property string|null                                                                     $contact_email
- * @property string|null                                                                     $contact_phone
- * @property string                                                                          $phone_type
- * @property int                                                                             $active
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
- * @property-read \App\Models\General\Reseller                                               $reseller
+ * @property int                               $id
+ * @property string                            $name
+ * @property string                            $contact_name
+ * @property string|null                       $contact_email
+ * @property string|null                       $contact_phone
+ * @property string                            $phone_type
+ * @property int                               $active
+ * @property \Illuminate\Support\Carbon|null   $created_at
+ * @property \Illuminate\Support\Carbon|null   $updated_at
+ * @property-read \App\Models\General\Reseller $reseller
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Company newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Company newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\General\Company query()

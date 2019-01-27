@@ -8,15 +8,14 @@ use Laravel\Scout\Searchable;
 /**
  * App\Models\Website\AboutUs
  *
- * @property int                                                                             $id
- * @property string                                                                          $name
- * @property string|null                                                                     $portrait
- * @property string                                                                          $job_title
- * @property string                                                                          $job_summary
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read string                                                                     $portrait_link
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $name
+ * @property string|null                     $portrait
+ * @property string                          $job_title
+ * @property string                          $job_summary
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read string                     $portrait_link
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\AboutUs newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\AboutUs newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Website\AboutUs query()

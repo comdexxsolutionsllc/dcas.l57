@@ -15,3 +15,10 @@ yarn-error.log
 /public/phpcs.xml
 /public/phpmd.html
 notes.txt
+/tests/snipe-base/snipe_snapshot.sql
+/tests/snipe-base/.snipe
+config/snipe.php
+resources/lang/zh-CN/
+resources/lang/zh-TW/
+tests/Browser/Components/
+tests/snipe-base/

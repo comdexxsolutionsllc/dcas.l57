@@ -7,13 +7,12 @@ use App\Models\BaseModel;
 /**
  * App\Models\Nameserver\Tsigkey
  *
- * @property int                                                                             $id
- * @property string                                                                          $name
- * @property string                                                                          $algorithm
- * @property string                                                                          $secret
- * @property array                                                                           $created_at
- * @property array                                                                           $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int    $id
+ * @property string $name
+ * @property string $algorithm
+ * @property string $secret
+ * @property array  $created_at
+ * @property array  $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Tsigkey newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Tsigkey newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nameserver\Tsigkey query()

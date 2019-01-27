@@ -7,22 +7,21 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\RaidCard
  *
- * @property int                                                                             $id
- * @property string                                                                          $vendor
- * @property string                                                                          $model
- * @property string                                                                          $launch_date
- * @property string|null                                                                     $expected_discontinuance
- * @property int                                                                             $data_transfer_rate
- * @property mixed                                                                           $supported_devices
- * @property mixed                                                                           $supported_raid_levels
- * @property int                                                                             $jbod_mode
- * @property int                                                                             $number_of_internal_ports
- * @property int                                                                             $number_of_supported_devices
- * @property int                                                                             $embedded_memory
- * @property mixed                                                                           $supported_oses
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $vendor
+ * @property string                          $model
+ * @property string                          $launch_date
+ * @property string|null                     $expected_discontinuance
+ * @property int                             $data_transfer_rate
+ * @property mixed                           $supported_devices
+ * @property mixed                           $supported_raid_levels
+ * @property int                             $jbod_mode
+ * @property int                             $number_of_internal_ports
+ * @property int                             $number_of_supported_devices
+ * @property int                             $embedded_memory
+ * @property mixed                           $supported_oses
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\RaidCard newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\RaidCard newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\RaidCard query()

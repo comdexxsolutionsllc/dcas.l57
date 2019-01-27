@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 
 class ModelService
 {
+
     public $model;
 
     public $connectionName;
@@ -26,14 +27,13 @@ class ModelService
 
         $this->model = $model;
 
-        $this->connectionName = $modelInstance->getConnectionName() !== null ?
-            $modelInstance->getConnectionName() : config('database.default');
+        $this->connectionName = $modelInstance->getConnectionName() !== null ? $modelInstance->getConnectionName() : config('database.default');
 
         $this->tablePrefix = config("database.connections.$this->connectionName.prefix", '');
 
         $this->tableName = $modelInstance->getTable();
 
-        $this->tablePrefixedName = $this->tablePrefix.$this->tableName;
+        $this->tablePrefixedName = $this->tablePrefix . $this->tableName;
 
         $this->indexName = $modelInstance->searchableAs();
 
@@ -51,7 +51,7 @@ class ModelService
             $sql = "SHOW FIELDS FROM $this->tablePrefixedName where Field = ?";
             $column = DB::connection($this->connectionName)->select($sql, [$searchableField]);
 
-            if (!isset($column[0])) {
+            if (! isset($column[0])) {
                 continue;
             }
 

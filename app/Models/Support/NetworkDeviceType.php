@@ -8,14 +8,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /**
  * App\Models\Support\NetworkDeviceType
  *
- * @property int                                                                             $id
- * @property string                                                                          $name
- * @property string|null                                                                     $description
- * @property int                                                                             $active
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
- * @property-read \App\Models\Support\NetworkDevice                                          $networkDevice
+ * @property int                                    $id
+ * @property string                                 $name
+ * @property string|null                            $description
+ * @property int                                    $active
+ * @property \Illuminate\Support\Carbon|null        $created_at
+ * @property \Illuminate\Support\Carbon|null        $updated_at
+ * @property-read \App\Models\Support\NetworkDevice $networkDevice
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\NetworkDeviceType newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\NetworkDeviceType newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\NetworkDeviceType query()

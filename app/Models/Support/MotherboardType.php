@@ -7,24 +7,23 @@ use App\Models\BaseModel;
 /**
  * App\Models\Support\MotherboardType
  *
- * @property int                                                                             $id
- * @property string                                                                          $vendor
- * @property string                                                                          $model
- * @property string                                                                          $form_factor
- * @property int|null                                                                        $assigned_chassis
- * @property mixed                                                                           $assigned_hdds
- * @property mixed                                                                           $assigned_memory
- * @property mixed                                                                           $assigned_networking_cards
- * @property mixed                                                                           $assigned_raid_cards
- * @property string                                                                          $bios_features
- * @property string                                                                          $chipset
- * @property string                                                                          $expansion_slots
- * @property string                                                                          $front_side_bus
- * @property string                                                                          $hdd_connection_type
- * @property mixed                                                                           $processor_information
- * @property \Illuminate\Support\Carbon|null                                                 $created_at
- * @property \Illuminate\Support\Carbon|null                                                 $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\Altek\Accountant\Models\Ledger[] $ledgers
+ * @property int                             $id
+ * @property string                          $vendor
+ * @property string                          $model
+ * @property string                          $form_factor
+ * @property int|null                        $assigned_chassis
+ * @property mixed                           $assigned_hdds
+ * @property mixed                           $assigned_memory
+ * @property mixed                           $assigned_networking_cards
+ * @property mixed                           $assigned_raid_cards
+ * @property string                          $bios_features
+ * @property string                          $chipset
+ * @property string                          $expansion_slots
+ * @property string                          $front_side_bus
+ * @property string                          $hdd_connection_type
+ * @property mixed                           $processor_information
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\MotherboardType newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\MotherboardType newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Support\MotherboardType query()
